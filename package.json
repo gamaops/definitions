@@ -1,0 +1,37 @@
+{
+  "name": "@gamaops/definitions",
+  "version": "0.0.0",
+  "description": "GamaOps domains definitions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gamaops/definitions.git"
+  },
+  "keywords": [
+    "domains",
+    "definitions",
+    "proto",
+    "schemas",
+    "types"
+  ],
+  "contributors": [
+    {
+      "email": "victorfranlopes@outlook.com",
+      "name": "vflopes",
+      "url": "https://github.com/vflopes"
+    },
+    {
+      "email": "coder.marcos@gmail.com",
+      "name": "codermarcos",
+      "url": "https://github.com/codermarcos"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gamaops/definitions/issues"
+  },
+  "homepage": "https://github.com/gamaops/definitions#readme"
+}

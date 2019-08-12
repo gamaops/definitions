@@ -3,34 +3,34 @@ syntax = "proto3";
 package document.v1;
 
 message Document {
-	string documentId = 1;
-	enum DocumentType {
-		BRACPF = 1;
-		BRACNH = 2;
-	}
-	DocumentType documentType = 2;
-	string personId = 3;
-	string value = 4;
+  string documentId = 1;
+  enum DocumentType {
+    BRACPF = 1;
+    BRACNH = 2;
+  }
+  DocumentType documentType = 2;
+  string personId = 3;
+  string value = 4;
 }
 
 message AddDocumentRequest {
-	Document document = 1;
+  Document document = 1;
 }
 
 message AddDocumentResponse {
-	string documentId = 1;
+  string documentId = 1;
 }
 
 message UploadDocumentPhotoRequest {
-	string documentId = 1;
-	bytes chunk = 2;
+  string documentId = 1;
+  bytes chunk = 2;
 }
 
 message UploadDocumentPhotoResponse {
-	string documentPhotoId = 1;
+  string documentPhotoId = 1;
 }
 
 service DocumentService {
-	rpc AddDocument (stream AddDocumentRequest) returns (stream AddDocumentResponse);
-	rpc UploadDocumentPhoto (stream UploadDocumentPhotoRequest) returns (UploadDocumentPhotoResponse);
+  rpc AddDocument (stream AddDocumentRequest) returns (stream AddDocumentResponse);
+  rpc UploadDocumentPhoto (stream UploadDocumentPhotoRequest) returns (UploadDocumentPhotoResponse);
 }
