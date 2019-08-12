@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package carrier.v1;
+
+message Vehicle {
+	string vehicleId = 1;
+	string personId = 2;
+	enum VehicleKind {
+		MOTORCYCLE = 1;
+		CAR = 2;
+	}
+	VehicleKind kind = 3;
+	string brandId = 4;
+	string modelId = 5;
+	string color = 6;
+	string licensePlate = 7;
+}
+
+message AddVehicleRequest {
+	Vehicle vehicle = 1;
+}
+
+message AddVehicleResponse {
+	string vehicleId = 1;
+}
+
+service CarrierService {
+	rpc AddVehicle (AddVehicleRequest) returns (AddVehicleResponse);
+}
