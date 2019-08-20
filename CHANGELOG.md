@@ -1,3 +1,12 @@
+## 2019-08-20T22:21:29.194Z
+### 🆕 - add code or file(s) (schema)
+
+#### none
+
+- Add validate sign up schema
+
+-----------------------------
+
 ## 2019-08-20T09:27:38.060Z
 ### 🎉 - initial commit (type)
 
