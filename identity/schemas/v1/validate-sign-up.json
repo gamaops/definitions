@@ -1,0 +1,19 @@
+{
+	"$id": "identity.v1.ValidateSignUp",
+	"type": "object",
+	"properties": {
+		"validationCode": {
+			"type": "string",
+			"minLength": 6,
+			"maxLength": 6
+		},
+		"signUpId": {
+			"type": "string",
+			"format": "uuid"
+		}
+	},
+	"required": [
+		"validationCode",
+		"signUpId"
+	]
+}
