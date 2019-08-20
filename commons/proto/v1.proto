@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package commons.v1;
+
+message OperationsDates {
+  string createdAt = 1;
+  string createdJobId = 2;
+  string updatedAt = 3;
+  string updatedJobId = 4;
+}
