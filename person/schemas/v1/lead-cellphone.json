@@ -1,0 +1,19 @@
+{
+	"$id": "person.v1.Lead.cellphone",
+	"type": "object",
+	"properties": {
+		"cellphone": {
+			"type": "string",
+			"minLength": 8,
+			"maxLength": 20
+		},
+		"validationChannel": {
+			"type": "integer",
+			"const": 1
+		}
+	},
+	"required": [
+		"cellphone",
+		"validationChannel"
+	]
+}

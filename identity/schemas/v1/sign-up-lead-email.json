@@ -1,0 +1,18 @@
+{
+	"$id": "identity.v1.SignUpLead.email",
+	"type": "object",
+	"properties": {
+		"email": {
+			"type": "string",
+			"format": "email"
+		},
+		"validationChannel": {
+			"type": "integer",
+			"const": 0
+		}
+	},
+	"required": [
+		"email",
+		"validationChannel"
+	]
+}

@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package identity.v1;
+
+enum ValidationChannel {
+  EMAIL = 0;
+  CELLPHONE = 1;
+}
+
+message SignUpLead {
+  string signUpId = 1;
+  ValidationChannel validationChannel = 2;
+  string name = 3;
+  string email = 4;
+  string cellphone = 5;
+  string createdAt = 6;
+  string createdJobId = 7;
+  string updatedAt = 8;
+  string updatedJobId = 9;
+  string signedUpAt = 10;
+  string signedUpJobId = 11;
+}
+
+message SignUpLeadRequest {
+  SignUpLead signUpLead = 1;
+}
+
+message SignUpResponse {
+  string signUpId = 1;
+}
+
+message ValidateSignUpRequest {
+  string signUpId = 1;
+  string validationCode = 2;
+}
+
+message ValidateSignUpResponse {
+  bool success = 1;
+  string identityToken = 2;
+}
+
+service SignUpService {
+  rpc SignUpLead (SignUpLeadRequest) returns (SignUpResponse);
+  rpc ValidateSignUp (ValidateSignUpRequest) returns (ValidateSignUpResponse);
+}

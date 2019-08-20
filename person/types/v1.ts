@@ -7,11 +7,21 @@ import {
 	ServiceDefinition,
 } from 'grpc';
 
+export enum EVerificationChannel {
+	EMAIL = 0,
+	CELLPHONE = 1,
+}
+
 export interface ILead {
-	personId?: string;
+	leadId?: string;
 	name?: string;
 	email?: string;
 	cellphone?: string;
+	validationChannel?: EVerificationChannel;
+	createdAt?: Date | string;
+	createdJobId?: string;
+	updatedAt?: Date | string;
+	updatedJobId?: string;
 }
 
 export interface ICreateLeadRequest {
@@ -19,12 +29,12 @@ export interface ICreateLeadRequest {
 }
 
 export interface ICreateLeadResponse {
-	personId: string;
+	leadId: string;
 }
 
 export interface IVerifyLeadRequest {
 	personId: string;
-	code: string;
+	validationCode: string;
 }
 
 export interface IVerifyLeadResponse {

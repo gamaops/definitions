@@ -3,10 +3,19 @@ syntax = "proto3";
 package person.v1;
 
 message Lead {
-  string personId = 1;
+  string leadId = 1;
   string name = 2;
   string email = 3;
   string cellphone = 4;
+  enum ValidationChannel {
+    EMAIL = 0;
+    CELLPHONE = 1;
+  }
+  ValidationChannel validationChannel = 5;
+  string createdAt = 6;
+  string createdJobId = 7;
+  string updatedAt = 8;
+  string updatedJobId = 9;
 }
 
 message CreateLeadRequest {
@@ -14,16 +23,17 @@ message CreateLeadRequest {
 }
 
 message CreateLeadResponse {
-  string personId = 1;
+  string leadId = 1;
 }
 
 message VerifyLeadRequest {
-  string personId = 1;
-  string code = 2;
+  string leadId = 1;
+  string validationCode = 2;
 }
 
 message VerifyLeadResponse {
-  boolean success = 1;
+  string personId = 1;
+  bool success = 2;
 }
 
 service PersonService {
