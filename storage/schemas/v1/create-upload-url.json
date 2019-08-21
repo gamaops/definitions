@@ -1,0 +1,13 @@
+{
+	"$id": "storage.v1.CreateUploadUrl",
+	"type": "object",
+	"properties": {
+		"bucketId": {
+			"type": "string",
+			"format": "uuid"
+		}
+	},
+	"required": [
+		"bucketId"
+	]
+}

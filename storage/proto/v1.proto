@@ -1,0 +1,74 @@
+syntax = "proto3";
+
+package storage.v1;
+
+enum FileProcessor {
+  NONE = 0;
+}
+
+message File {
+  string fileId = 1;
+  string path = 2;
+  string mimeType = 3;
+  repeated string tags = 4;
+  string bucketId = 5;
+  uint32 size = 6;
+  string uploadUrl = 7;
+  enum Status {
+    STORED = 0;
+    UPLOADING = 1;
+    FAILED = 2;
+  }
+  Status status = 8;
+  FileProcessor processor = 9;
+  string name = 10;
+  string createdAt = 11;
+  string createdJobId = 12;
+  string updatedAt = 13;
+  string updatedJobId = 14;
+}
+
+message Bucket {
+  string bucketId = 1;
+  string name = 2;
+  message Upload {
+    string url = 1;
+    uint32 tokenExpirationSeconds = 2;
+    string fieldName = 3;
+    uint32 maxCount = 4;
+  }
+  Upload upload = 3;
+  repeated string acceptedMimeTypes = 4;
+  uint32 maxSize = 5;
+  repeated string tags = 6;
+  FileProcessor processor = 7;
+  string createdAt = 8;
+  string createdJobId = 9;
+  string updatedAt = 10;
+  string updatedJobId = 11;
+}
+
+message CreateBucketRequest {
+  Bucket bucket = 1;
+}
+
+message CreateBucketResponse {
+  string bucketId = 1;
+}
+
+message CreateUploadUrlRequest {
+  string bucketId = 1;
+}
+
+message CreateUploadUrlResponse {
+  bool success = 1;
+  string uploadToken = 2;
+}
+
+service UploadService {
+  rpc CreateUploadUrl (CreateUploadUrlRequest) returns (CreateUploadUrlResponse);
+}
+
+service StorageService {
+  rpc CreateBucket (CreateBucketRequest) returns (CreateBucketResponse);
+}
