@@ -1,3 +1,12 @@
+## 2019-08-21T21:12:21.048Z
+### 🆕 - add code or file(s) (domain)
+
+#### none
+
+- Add storage domain
+
+-----------------------------
+
 ## 2019-08-20T22:51:46.985Z
 ### 🆕 - add code or file(s) (domain)
 
