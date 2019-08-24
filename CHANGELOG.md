@@ -1,3 +1,12 @@
+## 2019-08-24T09:21:57.345Z
+### 🆕 - add code or file(s) (schema)
+
+#### none
+
+- Add JWT SignUp validation schema
+
+-----------------------------
+
 ## 2019-08-24T02:49:51.556Z
 ### 🆕 - add code or file(s) (proto)
 
