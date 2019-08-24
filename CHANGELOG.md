@@ -1,3 +1,12 @@
+## 2019-08-24T02:49:51.556Z
+### 🆕 - add code or file(s) (proto)
+
+#### none
+
+- Add subject to CreateBucketRequest
+
+-----------------------------
+
 ## 2019-08-21T21:12:21.048Z
 ### 🆕 - add code or file(s) (domain)
 
