@@ -1,0 +1,48 @@
+{
+	"$id": "identity.v1.Jwt.SignUp",
+	"type": "object",
+	"properties": {
+		"header": {
+			"type": "object",
+			"properties": {
+				"alg": {
+					"type": "string",
+					"const": "RS256"
+				}
+			},
+			"required": [
+				"alg"
+			]
+		},
+		"payload": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"aud": {
+					"type": "string",
+					"const": "http://signup.gamaops.com"
+				},
+				"iss": {
+					"type": "string",
+					"const": "http://gamaops.com"
+				},
+				"sub": {
+					"type": "string",
+					"format": "uuid"
+				}
+			},
+			"required": [
+				"aud",
+				"iss",
+				"sub",
+				"name"
+			]
+		}
+	},
+	"required": [
+		"header",
+		"payload"
+	]
+}
