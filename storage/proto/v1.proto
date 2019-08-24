@@ -48,6 +48,10 @@ message Bucket {
   string updatedJobId = 11;
 }
 
+message CreateFileRequest {
+  File file = 1;
+}
+
 message CreateBucketRequest {
   Bucket bucket = 1;
 }

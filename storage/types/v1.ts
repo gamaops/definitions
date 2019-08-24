@@ -55,6 +55,10 @@ export interface IBucket {
 	updatedJobId?: string;
 }
 
+export interface ICreateFileRequest {
+	file: IFile;
+}
+
 export interface ICreateBucketRequest {
 	bucket: IBucket;
 }
