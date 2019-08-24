@@ -50,6 +50,7 @@ export interface ICreateBucketResponse {
 }
 export interface ICreateUploadUrlRequest {
     bucketId: string;
+    subject?: string;
 }
 export interface ICreateUploadUrlResponse {
     success: boolean;
