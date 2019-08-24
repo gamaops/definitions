@@ -24,6 +24,7 @@ export interface IFile {
 	mimeType?: string;
 	bucketId?: string;
 	uploadUrl?: string;
+	subject?: string;
 	size?: number;
 	tags?: Array<string>;
 	status?: Status;

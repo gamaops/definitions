@@ -26,6 +26,7 @@ message File {
   string createdJobId = 12;
   string updatedAt = 13;
   string updatedJobId = 14;
+  string subject = 15;
 }
 
 message Bucket {
