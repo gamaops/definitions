@@ -1,5 +1,5 @@
 syntax = "proto3";
-
+import "document/proto/kinds.proto";
 package document.v1;
 
 message Document {

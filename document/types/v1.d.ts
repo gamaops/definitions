@@ -3,7 +3,8 @@ import * as kinds from './kinds';
 export interface IDocument {
     documentId?: string;
     subjectId?: string;
-    value?: kinds.IBraCnh | kinds.IBraCpf;
+    braCpf?: kinds.IBraCpf;
+    braCnh?: kinds.IBraCnh;
     createdAt?: Date | string;
     createdJobId?: string;
     updatedAt?: Date | string;
