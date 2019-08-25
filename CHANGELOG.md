@@ -1,3 +1,12 @@
+## 2019-08-25T10:39:55.347Z
+### 🆕 - add code or file(s) (schema)
+
+#### none
+
+- Change document schema
+
+-----------------------------
+
 ## 2019-08-25T09:51:03.307Z
 ### 🐛 - fixing a bug (schema)
 
