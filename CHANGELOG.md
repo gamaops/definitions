@@ -1,3 +1,12 @@
+## 2019-08-25T09:49:57.919Z
+### 🆕 - add code or file(s) (schema)
+
+#### none
+
+- Add documents and validations
+
+-----------------------------
+
 ## 2019-08-24T22:09:11.843Z
 ### 🆕 - add code or file(s) (proto)
 
