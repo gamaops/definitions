@@ -9,6 +9,17 @@ import {
 
 import * as kinds from './kinds';
 
+export interface IDocumentFile {
+	documentId?: string;
+	fileId?: string;
+	isValid?: boolean;
+	validatedAt?: Date | string;
+	createdAt?: Date | string;
+	createdJobId?: string;
+	updatedAt?: Date | string;
+	updatedJobId?: string;
+}
+
 export enum DocumentValue {
 	BRACPF = 'braCpf',
 	BRACNH = 'braCpf',

@@ -2,6 +2,17 @@ syntax = "proto3";
 import "document/proto/kinds.proto";
 package document.v1;
 
+message DocumentFile {
+  string fileId = 1;
+  string documentId = 2;
+  string validatedAt = 3;
+  bool isValid = 4;
+  string createdAt = 5;
+  string createdJobId = 6;
+  string updatedAt = 7;
+  string updatedJobId = 8;
+}
+
 message Document {
   string documentId = 1;
   string subjectId = 2;
