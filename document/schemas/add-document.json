@@ -1,0 +1,12 @@
+{
+	"$id": "document.v1.AddDocument",
+	"type": "object",
+	"properties": {
+		"value": {
+			"type": "object"
+		}
+	},
+	"required": [
+		"value"
+	]
+}

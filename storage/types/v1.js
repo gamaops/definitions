@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var FileProcessor;
 (function (FileProcessor) {
     FileProcessor[FileProcessor["NONE"] = 0] = "NONE";
+    FileProcessor[FileProcessor["DOCUMENT"] = 1] = "DOCUMENT";
 })(FileProcessor = exports.FileProcessor || (exports.FileProcessor = {}));
 var Status;
 (function (Status) {

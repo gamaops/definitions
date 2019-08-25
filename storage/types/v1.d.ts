@@ -1,6 +1,7 @@
 import { ChannelCredentials, Client, ClientUnaryCall, handleUnaryCall, requestCallback, ServiceDefinition } from 'grpc';
 export declare enum FileProcessor {
-    NONE = 0
+    NONE = 0,
+    DOCUMENT = 1
 }
 export declare enum Status {
     STORED = 0,

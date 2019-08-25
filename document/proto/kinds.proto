@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package document.kinds;
+
+message BraCpf {
+  string cpf = 1;
+}
+
+message BraCnh {
+  string cnh = 1;
+}

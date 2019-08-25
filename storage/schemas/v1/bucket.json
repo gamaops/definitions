@@ -28,7 +28,8 @@
 		"processor": {
 			"type": "integer",
 			"enum": [
-				0
+				0,
+				1
 			]
 		},
 		"upload": {

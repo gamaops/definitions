@@ -9,6 +9,7 @@ import {
 
 export enum FileProcessor {
 	NONE = 0,
+	DOCUMENT = 1.
 }
 
 export enum Status {

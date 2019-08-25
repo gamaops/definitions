@@ -4,13 +4,15 @@ package document.v1;
 
 message Document {
   string documentId = 1;
-  enum DocumentType {
-    BRACPF = 1;
-    BRACNH = 2;
-  }
-  DocumentType documentType = 2;
-  string personId = 3;
-  string value = 4;
+  string subjectId = 2;
+  oneof value {
+    document.kinds.BraCpf braCpf = 3;
+    document.kinds.BraCnh braCnh = 4;
+  };
+  string createdAt = 5;
+  string createdJobId = 6;
+  string updatedAt = 7;
+  string updatedJobId = 8;
 }
 
 message AddDocumentRequest {
@@ -19,18 +21,9 @@ message AddDocumentRequest {
 
 message AddDocumentResponse {
   string documentId = 1;
-}
-
-message UploadDocumentPhotoRequest {
-  string documentId = 1;
-  bytes chunk = 2;
-}
-
-message UploadDocumentPhotoResponse {
-  string documentPhotoId = 1;
+  string bucketId = 2;
 }
 
 service DocumentService {
-  rpc AddDocument (stream AddDocumentRequest) returns (stream AddDocumentResponse);
-  rpc UploadDocumentPhoto (stream UploadDocumentPhotoRequest) returns (UploadDocumentPhotoResponse);
+  rpc AddDocument (AddDocumentRequest) returns (AddDocumentResponse);
 }

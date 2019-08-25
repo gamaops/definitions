@@ -1,0 +1,13 @@
+{
+	"$id": "document.kinds.BraCnh",
+	"type": "object",
+	"properties": {
+		"cnh": {
+			"type": "string",
+			"regex": "^[0-9]{11,11}$"
+		}
+	},
+	"required": [
+		"cnh"
+	]
+}

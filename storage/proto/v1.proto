@@ -4,6 +4,7 @@ package storage.v1;
 
 enum FileProcessor {
   NONE = 0;
+  DOCUMENT = 1;
 }
 
 message File {
