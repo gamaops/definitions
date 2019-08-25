@@ -1,3 +1,12 @@
+## 2019-08-25T10:47:04.160Z
+### 🆕 - add code or file(s) (type)
+
+#### none
+
+- Add oneof value enum for document
+
+-----------------------------
+
 ## 2019-08-25T10:43:59.621Z
 ### 🆕 - add code or file(s) (schema)
 
