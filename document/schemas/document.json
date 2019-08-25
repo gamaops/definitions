@@ -3,7 +3,11 @@
 	"type": "object",
 	"properties": {
 		"value": {
-			"type": "object"
+			"type": "string",
+			"enum": [
+				"braCpf",
+				"braCnh"
+			]
 		}
 	},
 	"required": [
