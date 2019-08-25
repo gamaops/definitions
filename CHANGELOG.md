@@ -1,3 +1,12 @@
+## 2019-08-25T09:51:03.307Z
+### 🐛 - fixing a bug (schema)
+
+#### none
+
+- Fix BraCpf validation
+
+-----------------------------
+
 ## 2019-08-25T09:49:57.919Z
 ### 🆕 - add code or file(s) (schema)
 
