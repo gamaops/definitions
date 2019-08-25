@@ -1,0 +1,13 @@
+{
+	"$id": "document.kinds.BraCpf",
+	"type": "object",
+	"properties": {
+		"cpf": {
+			"type": "string",
+			"regex": "^[0-9]{3,3}\\.[0-9]{3,3}\\.[0-9]{3,3}-[0-9]{2,2}$"
+		}
+	},
+	"required": [
+		"cpf"
+	]
+}
