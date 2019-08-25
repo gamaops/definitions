@@ -1,10 +1,15 @@
 import { ChannelCredentials, Client, ClientUnaryCall, handleUnaryCall, requestCallback, ServiceDefinition } from 'grpc';
 import * as kinds from './kinds';
+export declare enum DocumentValue {
+    BRACPF = "braCpf",
+    BRACNH = "braCpf"
+}
 export interface IDocument {
     documentId?: string;
     subjectId?: string;
     braCpf?: kinds.IBraCpf;
     braCnh?: kinds.IBraCnh;
+    value?: DocumentValue;
     createdAt?: Date | string;
     createdJobId?: string;
     updatedAt?: Date | string;
