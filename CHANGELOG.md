@@ -1,3 +1,12 @@
+## 2019-08-25T18:03:54.081Z
+### 🆕 - add code or file(s) (type)
+
+#### none
+
+- Add DocumentFile message to document domain
+
+-----------------------------
+
 ## 2019-08-25T10:47:04.160Z
 ### 🆕 - add code or file(s) (type)
 
