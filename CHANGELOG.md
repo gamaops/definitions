@@ -1,3 +1,12 @@
+## 2019-08-25T10:43:59.621Z
+### 🆕 - add code or file(s) (schema)
+
+#### none
+
+- Add document oneof validation
+
+-----------------------------
+
 ## 2019-08-25T10:39:55.347Z
 ### 🆕 - add code or file(s) (schema)
 
