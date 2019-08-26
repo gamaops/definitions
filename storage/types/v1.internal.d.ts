@@ -23,8 +23,10 @@ export declare type TUploadAdminServiceClient = new (address: string, credential
 export interface IPackageDefinition {
     document: {
         v1: {
-            UploadAdminService: TUploadAdminServiceClient & {
-                service: ServiceDefinition<IUploadAdminServiceImplementation>;
+            internal: {
+                UploadAdminService: TUploadAdminServiceClient & {
+                    service: ServiceDefinition<IUploadAdminServiceImplementation>;
+                };
             };
         };
     };

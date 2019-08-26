@@ -43,9 +43,11 @@ export type TDocumentAdminServiceClient = new (
 export interface IPackageDefinition {
 	document: {
 		v1: {
-			DocumentAdminService: TDocumentAdminServiceClient & {
-				service: ServiceDefinition<IDocumentAdminServiceImplementation>,
-			},
+			internal: {
+				DocumentAdminService: TDocumentAdminServiceClient & {
+					service: ServiceDefinition<IDocumentAdminServiceImplementation>,
+				},
+			}
 		},
 	};
 }
