@@ -1,3 +1,12 @@
+## 2019-08-26T10:34:09.889Z
+### 🐛 - fixing a bug (type)
+
+#### none
+
+- Fix storage internal types service root
+
+-----------------------------
+
 ## 2019-08-26T10:31:50.060Z
 ### 🐛 - fixing a bug (proto)
 
