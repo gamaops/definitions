@@ -1,3 +1,12 @@
+## 2019-08-26T09:11:52.091Z
+### 🆕 - add code or file(s) (domain)
+
+#### none
+
+- Add storage and document internal admin services
+
+-----------------------------
+
 ## 2019-08-25T18:03:54.081Z
 ### 🆕 - add code or file(s) (type)
 
