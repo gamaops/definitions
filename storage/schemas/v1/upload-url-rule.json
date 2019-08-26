@@ -1,0 +1,31 @@
+{
+	"$id": "storage.v1.internal.UploadUrlRule",
+	"type": "object",
+	"properties": {
+		"audience": {
+			"type": "string",
+			"format": "uri"
+		},
+		"limits": {
+			"type": "object",
+			"properties": {
+				"maxFileCount": {
+					"type": "integer",
+					"minimum": 0
+				}
+			},
+			"required": [
+				"maxFileCount"
+			]
+		},
+		"bucketId": {
+			"type": "string",
+			"format": "uuid"
+		}
+	},
+	"required": [
+		"audience",
+		"limits",
+		"bucketId"
+	]
+}

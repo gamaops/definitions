@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package document.v1.internal;
+
+message DocumentRule {
+  string documentKind = 1;
+  message Limits {
+    int32 maxFileCount = 1;
+    int32 maxValueCount = 2;
+  }
+  Limits limits = 2;
+  repeated string allowedAudiences = 3;
+}
+
+message SetDocumentRuleRequest {
+  DocumentRule documentRule = 1;
+}
+
+message SetDocumentRuleResponse {
+  bool success = 1;
+}
+
+service DocumentAdminService {
+  rpc SetDocumentRule (SetDocumentRuleRequest) returns (SetDocumentRuleResponse);
+}

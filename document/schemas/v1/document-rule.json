@@ -1,0 +1,42 @@
+{
+	"$id": "document.v1.internal.DocumentRule",
+	"type": "object",
+	"properties": {
+		"documentKind": {
+			"type": "string",
+			"enum": [
+				"braCpf",
+				"braCnh"
+			]
+		},
+		"limits": {
+			"type": "object",
+			"properties": {
+				"maxFileCount": {
+					"type": "integer",
+					"minimum": 0
+				},
+				"maxValueCount": {
+					"type": "integer",
+					"minimum": 0
+				}
+			},
+			"required": [
+				"maxFileCount",
+				"maxValueCount"
+			]
+		},
+		"allowedAudiences": {
+			"type": "array",
+			"items": {
+				"type": "string",
+				"format": "uri"
+			}
+		}
+	},
+	"required": [
+		"documentKind",
+		"limits",
+		"allowedAudiences"
+	]
+}

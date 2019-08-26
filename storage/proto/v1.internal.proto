@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package storage.v1.internal;
+
+message UploadUrlRule {
+  string audience = 1;
+  message Limits {
+    // Per subject
+    int32 maxFileCount = 1;
+  }
+  Limits limits = 2;
+  string bucketId = 3;
+}
+
+message SetUploadUrlRuleRequest {
+  UploadUrlRule uploadUrlRule = 1;
+}
+
+message SetUploadUrlRuleResponse {
+  bool success = 1;
+}
+
+service UploadAdminService {
+  rpc SetUploadUrlRule (SetUploadUrlRuleRequest) returns (SetUploadUrlRuleResponse);
+}
