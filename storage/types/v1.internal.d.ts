@@ -21,7 +21,7 @@ export interface IUploadAdminServiceClient extends Client {
 }
 export declare type TUploadAdminServiceClient = new (address: string, credentials: ChannelCredentials, options?: any) => IUploadAdminServiceClient;
 export interface IPackageDefinition {
-    document: {
+    storage: {
         v1: {
             internal: {
                 UploadAdminService: TUploadAdminServiceClient & {

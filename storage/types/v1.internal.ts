@@ -40,7 +40,7 @@ export type TUploadAdminServiceClient = new (
 ) => IUploadAdminServiceClient;
 
 export interface IPackageDefinition {
-	document: {
+	storage: {
 		v1: {
 			internal: {
 				UploadAdminService: TUploadAdminServiceClient & {
