@@ -1,3 +1,12 @@
+## 2019-08-26T10:31:50.060Z
+### 🐛 - fixing a bug (proto)
+
+#### none
+
+- Fix types service implementation for internals
+
+-----------------------------
+
 ## 2019-08-26T09:11:52.091Z
 ### 🆕 - add code or file(s) (domain)
 
