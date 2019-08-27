@@ -5,8 +5,7 @@ package document.v1.internal;
 message DocumentRule {
   string documentKind = 1;
   message Limits {
-    int32 maxFileCount = 1;
-    int32 maxValueCount = 2;
+    int32 maxValueCount = 1;
   }
   Limits limits = 2;
   repeated string allowedAudiences = 3;

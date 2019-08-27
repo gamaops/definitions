@@ -1,6 +1,5 @@
 import { ChannelCredentials, Client, ClientUnaryCall, handleUnaryCall, requestCallback, ServiceDefinition } from 'grpc';
 export interface IDocumentRuleLimits {
-    maxFileCount?: number;
     maxValueCount?: number;
 }
 export interface IDocumentRule {

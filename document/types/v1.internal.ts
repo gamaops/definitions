@@ -8,7 +8,6 @@ import {
 } from 'grpc';
 
 export interface IDocumentRuleLimits {
-	maxFileCount?: number;
 	maxValueCount?: number;
 }
 
