@@ -1,3 +1,12 @@
+## 2019-08-27T20:07:30.250Z
+### 🐛 - fixing a bug (proto)
+
+#### none
+
+- Fix document field id number
+
+-----------------------------
+
 ## 2019-08-27T19:34:44.283Z
 ### 🆕 - add code or file(s) (domain)
 
