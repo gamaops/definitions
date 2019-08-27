@@ -24,7 +24,7 @@ message Document {
   string createdJobId = 6;
   string updatedAt = 7;
   string updatedJobId = 8;
-  string audience = 8;
+  string audience = 9;
 }
 
 message AddDocumentRequest {
