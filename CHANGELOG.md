@@ -1,3 +1,12 @@
+## 2019-08-27T18:37:14.937Z
+### 🔥 - removing code or file(s) (proto)
+
+#### none
+
+- Remove maximum file count from document rules
+
+-----------------------------
+
 ## 2019-08-26T10:34:09.889Z
 ### 🐛 - fixing a bug (type)
 
