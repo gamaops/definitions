@@ -15,7 +15,7 @@ message DocumentFile {
 
 message Document {
   string documentId = 1;
-  string subjectId = 2;
+  string subject = 2;
   oneof value {
     document.kinds.BraCpf braCpf = 3;
     document.kinds.BraCnh braCnh = 4;
@@ -24,6 +24,7 @@ message Document {
   string createdJobId = 6;
   string updatedAt = 7;
   string updatedJobId = 8;
+  string audience = 8;
 }
 
 message AddDocumentRequest {

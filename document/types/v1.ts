@@ -27,7 +27,8 @@ export enum DocumentValue {
 
 export interface IDocument {
 	documentId?: string;
-	subjectId?: string;
+	subject?: string;
+	audience?: string;
 	braCpf?: kinds.IBraCpf;
 	braCnh?: kinds.IBraCnh;
 	value?: DocumentValue;
