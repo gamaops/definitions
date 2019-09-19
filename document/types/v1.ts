@@ -18,6 +18,7 @@ export interface IDocumentFile {
 	createdJobId?: string;
 	updatedAt?: Date | string;
 	updatedJobId?: string;
+	subject?: string;
 }
 
 export enum DocumentValue {

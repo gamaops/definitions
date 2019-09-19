@@ -11,6 +11,7 @@ message DocumentFile {
   string createdJobId = 6;
   string updatedAt = 7;
   string updatedJobId = 8;
+  string subject = 9;
 }
 
 message Document {
