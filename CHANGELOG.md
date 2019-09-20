@@ -1,3 +1,12 @@
+## 2019-09-20T16:22:14.104Z
+### 🆕 - add code or file(s) (type)
+
+#### none
+
+- Add front build
+
+-----------------------------
+
 ## 2019-09-19T19:26:26.367Z
 ### 🆕 - add code or file(s) (proto)
 
