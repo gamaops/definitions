@@ -4,7 +4,8 @@
   "description": "GamaOps domains definitions",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "build:back": "tsc",
+    "build:front": "node front-build.js",
     "lint": "tslint --fix -c 'tslint.json' -e './node_modules/**/*' './**/*.ts'"
   },
   "repository": {
@@ -37,8 +38,16 @@
   "homepage": "https://github.com/gamaops/definitions#readme",
   "devDependencies": {
     "@grpc/proto-loader": "^0.5.1",
+    "@types/fs-extra": "^8.0.0",
+    "@types/glob": "^7.1.1",
+    "@types/jsonpath": "^0.2.0",
     "@types/node": "^12.7.2",
+    "change-case": "^3.1.0",
+    "fs-extra": "^8.1.0",
+    "glob": "^7.1.4",
     "grpc": "^1.22.2",
+    "jsonpath": "^1.0.2",
+    "protobufjs": "^6.8.8",
     "tslint": "^5.18.0",
     "typescript": "^3.5.3"
   }

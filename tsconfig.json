@@ -23,7 +23,9 @@
     "resolveJsonModule": true
   },
   "include": [
-    "**/*.ts"
+    "index.ts",
+    "front-build.ts",
+    "**/types/*.ts"
   ],
   "exclude": [
     "node_modules",
