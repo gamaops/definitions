@@ -24,7 +24,7 @@
   },
   "include": [
     "index.ts",
-    "front-build.ts",
+    "src/**/*.ts",
     "**/types/*.ts"
   ],
   "exclude": [
