@@ -1,3 +1,12 @@
+## 2019-09-21T10:18:58.195Z
+### 🆕 - add code or file(s) (domain)
+
+#### none
+
+- Add elasticsearch setup script
+
+-----------------------------
+
 ## 2019-09-20T16:22:14.104Z
 ### 🆕 - add code or file(s) (type)
 
