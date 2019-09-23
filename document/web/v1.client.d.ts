@@ -15,7 +15,7 @@ type DocumentServiceAddDocument = {
 
 export class DocumentService {
   static readonly serviceName: string;
-  static readonly Adddocument: DocumentServiceAddDocument;
+  static readonly AddDocument: DocumentServiceAddDocument;
 }
 
 export type ServiceError = { message: string, code: number; metadata: grpc.Metadata }

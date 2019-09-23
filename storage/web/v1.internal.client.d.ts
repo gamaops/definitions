@@ -4,18 +4,18 @@
 import * as storage_proto_v1_internal_pb from "../../storage/web/v1.internal";
 import {grpc} from "@improbable-eng/grpc-web";
 
-type UploadAdminServicesetUploadUrlRule = {
+type UploadAdminServiceSetUploadUrlRule = {
   readonly methodName: string;
   readonly service: typeof UploadAdminService;
   readonly requestStream: false;
   readonly responseStream: false;
-  readonly requestType: typeof storage_proto_v1_internal_pb.setUploadUrlRuleRequest;
-  readonly responseType: typeof storage_proto_v1_internal_pb.setUploadUrlRuleResponse;
+  readonly requestType: typeof storage_proto_v1_internal_pb.SetUploadUrlRuleRequest;
+  readonly responseType: typeof storage_proto_v1_internal_pb.SetUploadUrlRuleResponse;
 };
 
 export class UploadAdminService {
   static readonly serviceName: string;
-  static readonly setuploadUrlRule: UploadAdminServicesetUploadUrlRule;
+  static readonly SetUploadUrlRule: UploadAdminServiceSetUploadUrlRule;
 }
 
 export type ServiceError = { message: string, code: number; metadata: grpc.Metadata }
@@ -51,13 +51,13 @@ export class UploadAdminServiceClient {
 
   constructor(serviceHost: string, options?: grpc.RpcOptions);
   setUploadUrlRule(
-    requestMessage: storage_proto_v1_internal_pb.setUploadUrlRuleRequest,
+    requestMessage: storage_proto_v1_internal_pb.SetUploadUrlRuleRequest,
     metadata: grpc.Metadata,
-    callback: (error: ServiceError|null, responseMessage: storage_proto_v1_internal_pb.setUploadUrlRuleResponse|null) => void
+    callback: (error: ServiceError|null, responseMessage: storage_proto_v1_internal_pb.SetUploadUrlRuleResponse|null) => void
   ): UnaryResponse;
   setUploadUrlRule(
-    requestMessage: storage_proto_v1_internal_pb.setUploadUrlRuleRequest,
-    callback: (error: ServiceError|null, responseMessage: storage_proto_v1_internal_pb.setUploadUrlRuleResponse|null) => void
+    requestMessage: storage_proto_v1_internal_pb.SetUploadUrlRuleRequest,
+    callback: (error: ServiceError|null, responseMessage: storage_proto_v1_internal_pb.SetUploadUrlRuleResponse|null) => void
   ): UnaryResponse;
 }
 

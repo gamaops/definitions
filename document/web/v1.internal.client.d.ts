@@ -4,18 +4,18 @@
 import * as document_proto_v1_internal_pb from "../../document/web/v1.internal";
 import {grpc} from "@improbable-eng/grpc-web";
 
-type DocumentAdminServicesetDocumentRule = {
+type DocumentAdminServiceSetDocumentRule = {
   readonly methodName: string;
   readonly service: typeof DocumentAdminService;
   readonly requestStream: false;
   readonly responseStream: false;
-  readonly requestType: typeof document_proto_v1_internal_pb.setDocumentRuleRequest;
-  readonly responseType: typeof document_proto_v1_internal_pb.setDocumentRuleResponse;
+  readonly requestType: typeof document_proto_v1_internal_pb.SetDocumentRuleRequest;
+  readonly responseType: typeof document_proto_v1_internal_pb.SetDocumentRuleResponse;
 };
 
 export class DocumentAdminService {
   static readonly serviceName: string;
-  static readonly setdocumentRule: DocumentAdminServicesetDocumentRule;
+  static readonly SetDocumentRule: DocumentAdminServiceSetDocumentRule;
 }
 
 export type ServiceError = { message: string, code: number; metadata: grpc.Metadata }
@@ -51,13 +51,13 @@ export class DocumentAdminServiceClient {
 
   constructor(serviceHost: string, options?: grpc.RpcOptions);
   setDocumentRule(
-    requestMessage: document_proto_v1_internal_pb.setDocumentRuleRequest,
+    requestMessage: document_proto_v1_internal_pb.SetDocumentRuleRequest,
     metadata: grpc.Metadata,
-    callback: (error: ServiceError|null, responseMessage: document_proto_v1_internal_pb.setDocumentRuleResponse|null) => void
+    callback: (error: ServiceError|null, responseMessage: document_proto_v1_internal_pb.SetDocumentRuleResponse|null) => void
   ): UnaryResponse;
   setDocumentRule(
-    requestMessage: document_proto_v1_internal_pb.setDocumentRuleRequest,
-    callback: (error: ServiceError|null, responseMessage: document_proto_v1_internal_pb.setDocumentRuleResponse|null) => void
+    requestMessage: document_proto_v1_internal_pb.SetDocumentRuleRequest,
+    callback: (error: ServiceError|null, responseMessage: document_proto_v1_internal_pb.SetDocumentRuleResponse|null) => void
   ): UnaryResponse;
 }
 

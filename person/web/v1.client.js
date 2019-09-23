@@ -11,7 +11,7 @@ var PersonService = (function () {
 }());
 
 PersonService.CreateLead = {
-  methodname: "CreateLead",
+  methodName: "CreateLead",
   service: PersonService,
   requestStream: false,
   responseStream: false,
@@ -20,7 +20,7 @@ PersonService.CreateLead = {
 };
 
 PersonService.VerifyLead = {
-  methodname: "VerifyLead",
+  methodName: "VerifyLead",
   service: PersonService,
   requestStream: false,
   responseStream: false,

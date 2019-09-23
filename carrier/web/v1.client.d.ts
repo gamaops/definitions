@@ -15,7 +15,7 @@ type CarrierServiceAddVehicle = {
 
 export class CarrierService {
   static readonly serviceName: string;
-  static readonly Addvehicle: CarrierServiceAddVehicle;
+  static readonly AddVehicle: CarrierServiceAddVehicle;
 }
 
 export type ServiceError = { message: string, code: number; metadata: grpc.Metadata }

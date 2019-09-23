@@ -11,7 +11,7 @@ var UploadService = (function () {
 }());
 
 UploadService.CreateUploadUrl = {
-  methodname: "CreateUploadUrl",
+  methodName: "CreateUploadUrl",
   service: UploadService,
   requestStream: false,
   responseStream: false,
@@ -66,7 +66,7 @@ var StorageService = (function () {
 }());
 
 StorageService.CreateBucket = {
-  methodname: "CreateBucket",
+  methodName: "CreateBucket",
   service: StorageService,
   requestStream: false,
   responseStream: false,

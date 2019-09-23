@@ -5,7 +5,7 @@ import * as storage_proto_v1_pb from "../../storage/web/v1";
 import {grpc} from "@improbable-eng/grpc-web";
 
 type UploadServiceCreateUploadUrl = {
-  readonly methodname: string;
+  readonly methodName: string;
   readonly service: typeof UploadService;
   readonly requestStream: false;
   readonly responseStream: false;
@@ -14,12 +14,12 @@ type UploadServiceCreateUploadUrl = {
 };
 
 export class UploadService {
-  static readonly servicename: string;
-  static readonly Createuploadurl: UploadServiceCreateUploadUrl;
+  static readonly serviceName: string;
+  static readonly CreateUploadUrl: UploadServiceCreateUploadUrl;
 }
 
 type StorageServiceCreateBucket = {
-  readonly methodname: string;
+  readonly methodName: string;
   readonly service: typeof StorageService;
   readonly requestStream: false;
   readonly responseStream: false;
@@ -28,8 +28,8 @@ type StorageServiceCreateBucket = {
 };
 
 export class StorageService {
-  static readonly servicename: string;
-  static readonly Createbucket: StorageServiceCreateBucket;
+  static readonly serviceName: string;
+  static readonly CreateBucket: StorageServiceCreateBucket;
 }
 
 export type ServiceError = { message: string, code: number; metadata: grpc.Metadata }

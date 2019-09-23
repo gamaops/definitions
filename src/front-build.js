@@ -67,7 +67,8 @@ const build = () => {
         });
         for (const generatedFile of generatedFiles) {
             normalizeDirectories(generatedFile, relative);
-            normalizeFields(generatedFile, fields);
+            if (!/_service/.test(generatedFile) && !/_grpc_web_pb/.test(generatedFile))
+                normalizeFields(generatedFile, fields);
             fs_extra_1.default.moveSync(generatedFile, path_1.default.join(webDir, path_1.default.basename(generatedFile)
                 .replace(/_service/, '.client')
                 .replace(/_grpc_web_pb/, '.client')

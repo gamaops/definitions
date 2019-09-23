@@ -5,7 +5,7 @@ import * as person_proto_v1_pb from "../../person/web/v1";
 import {grpc} from "@improbable-eng/grpc-web";
 
 type PersonServiceCreateLead = {
-  readonly methodname: string;
+  readonly methodName: string;
   readonly service: typeof PersonService;
   readonly requestStream: false;
   readonly responseStream: false;
@@ -14,7 +14,7 @@ type PersonServiceCreateLead = {
 };
 
 type PersonServiceVerifyLead = {
-  readonly methodname: string;
+  readonly methodName: string;
   readonly service: typeof PersonService;
   readonly requestStream: false;
   readonly responseStream: false;
@@ -23,9 +23,9 @@ type PersonServiceVerifyLead = {
 };
 
 export class PersonService {
-  static readonly servicename: string;
-  static readonly Createlead: PersonServiceCreateLead;
-  static readonly Verifylead: PersonServiceVerifyLead;
+  static readonly serviceName: string;
+  static readonly CreateLead: PersonServiceCreateLead;
+  static readonly VerifyLead: PersonServiceVerifyLead;
 }
 
 export type ServiceError = { message: string, code: number; metadata: grpc.Metadata }

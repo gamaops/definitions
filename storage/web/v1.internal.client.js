@@ -10,13 +10,13 @@ var UploadAdminService = (function () {
   return UploadAdminService;
 }());
 
-UploadAdminService.setUploadUrlRule = {
-  methodName: "setUploadUrlRule",
+UploadAdminService.SetUploadUrlRule = {
+  methodName: "SetUploadUrlRule",
   service: UploadAdminService,
   requestStream: false,
   responseStream: false,
-  requestType: storage_proto_v1_internal_pb.setUploadUrlRuleRequest,
-  responseType: storage_proto_v1_internal_pb.setUploadUrlRuleResponse
+  requestType: storage_proto_v1_internal_pb.SetUploadUrlRuleRequest,
+  responseType: storage_proto_v1_internal_pb.SetUploadUrlRuleResponse
 };
 
 exports.UploadAdminService = UploadAdminService;
@@ -30,7 +30,7 @@ UploadAdminServiceClient.prototype.setUploadUrlRule = function setUploadUrlRule(
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(UploadAdminService.setUploadUrlRule, {
+  var client = grpc.unary(UploadAdminService.SetUploadUrlRule, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,

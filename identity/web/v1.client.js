@@ -11,7 +11,7 @@ var SignUpService = (function () {
 }());
 
 SignUpService.SignUpLead = {
-  methodname: "SignUpLead",
+  methodName: "SignUpLead",
   service: SignUpService,
   requestStream: false,
   responseStream: false,
@@ -20,7 +20,7 @@ SignUpService.SignUpLead = {
 };
 
 SignUpService.ValidateSignUp = {
-  methodname: "ValidateSignUp",
+  methodName: "ValidateSignUp",
   service: SignUpService,
   requestStream: false,
   responseStream: false,

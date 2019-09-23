@@ -5,7 +5,7 @@ import * as identity_proto_v1_pb from "../../identity/web/v1";
 import {grpc} from "@improbable-eng/grpc-web";
 
 type SignUpServiceSignUpLead = {
-  readonly methodname: string;
+  readonly methodName: string;
   readonly service: typeof SignUpService;
   readonly requestStream: false;
   readonly responseStream: false;
@@ -14,7 +14,7 @@ type SignUpServiceSignUpLead = {
 };
 
 type SignUpServiceValidateSignUp = {
-  readonly methodname: string;
+  readonly methodName: string;
   readonly service: typeof SignUpService;
   readonly requestStream: false;
   readonly responseStream: false;
@@ -23,8 +23,8 @@ type SignUpServiceValidateSignUp = {
 };
 
 export class SignUpService {
-  static readonly servicename: string;
-  static readonly signUpLead: SignUpServiceSignUpLead;
+  static readonly serviceName: string;
+  static readonly SignUpLead: SignUpServiceSignUpLead;
   static readonly ValidateSignUp: SignUpServiceValidateSignUp;
 }
 

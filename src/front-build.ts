@@ -104,7 +104,8 @@ const build = () => {
 
 		for (const generatedFile of generatedFiles) {
 			normalizeDirectories(generatedFile, relative);
-			normalizeFields(generatedFile, fields);
+			if (!/_service/.test(generatedFile) && !/_grpc_web_pb/.test(generatedFile))
+				normalizeFields(generatedFile, fields);
 			fse.moveSync(
 				generatedFile,
 				path.join(

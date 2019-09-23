@@ -10,13 +10,13 @@ var DocumentAdminService = (function () {
   return DocumentAdminService;
 }());
 
-DocumentAdminService.setDocumentRule = {
-  methodName: "setDocumentRule",
+DocumentAdminService.SetDocumentRule = {
+  methodName: "SetDocumentRule",
   service: DocumentAdminService,
   requestStream: false,
   responseStream: false,
-  requestType: document_proto_v1_internal_pb.setDocumentRuleRequest,
-  responseType: document_proto_v1_internal_pb.setDocumentRuleResponse
+  requestType: document_proto_v1_internal_pb.SetDocumentRuleRequest,
+  responseType: document_proto_v1_internal_pb.SetDocumentRuleResponse
 };
 
 exports.DocumentAdminService = DocumentAdminService;
@@ -30,7 +30,7 @@ DocumentAdminServiceClient.prototype.setDocumentRule = function setDocumentRule(
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(DocumentAdminService.setDocumentRule, {
+  var client = grpc.unary(DocumentAdminService.SetDocumentRule, {
     request: requestMessage,
     host: this.serviceHost,
     metadata: metadata,
