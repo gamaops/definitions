@@ -1,10 +1,10 @@
 import * as grpcWeb from 'grpc-web';
 
-import * as document_proto_kinds_pb from '../../document/web/kinds_pb';
+import * as document_proto_kinds_pb from '../../document/web/kinds';
 
 import {
   AddDocumentRequest,
-  AddDocumentResponse} from './v1_pb';
+  AddDocumentResponse} from './v1';
 
 export class DocumentServiceClient {
   constructor (hostname: string,

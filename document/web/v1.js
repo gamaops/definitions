@@ -11,7 +11,7 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
-var document_proto_kinds_pb = require('../../document/web/kinds_pb.js');
+var document_proto_kinds_pb = require('../../document/web/kinds');
 goog.object.extend(proto, document_proto_kinds_pb);
 goog.exportSymbol('proto.document.v1.AddDocumentRequest', null, global);
 goog.exportSymbol('proto.document.v1.AddDocumentResponse', null, global);

@@ -2,7 +2,7 @@ import * as grpcWeb from 'grpc-web';
 
 import {
   setDocumentRuleRequest,
-  setDocumentRuleResponse} from './v1.internal_pb';
+  setDocumentRuleResponse} from './v1.internal';
 
 export class DocumentAdminServiceClient {
   constructor (hostname: string,

@@ -1,6 +1,6 @@
 import * as jspb from "google-protobuf"
 
-import * as document_proto_kinds_pb from '../../document/web/kinds_pb';
+import * as document_proto_kinds_pb from '../../document/web/kinds';
 
 export class DocumentFile extends jspb.Message {
   getFileId(): string;

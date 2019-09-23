@@ -4,7 +4,7 @@ import {
   CreateLeadRequest,
   CreateLeadResponse,
   VerifyLeadRequest,
-  VerifyLeadResponse} from './v1_pb';
+  VerifyLeadResponse} from './v1';
 
 export class PersonServiceClient {
   constructor (hostname: string,

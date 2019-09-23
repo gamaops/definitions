@@ -13,7 +13,7 @@ grpc.web = require('grpc-web');
 
 const proto = {};
 proto.carrier = {};
-proto.carrier.v1 = require('./v1_pb.js');
+proto.carrier.v1 = require('./v1');
 
 /**
  * @param {string} hostname

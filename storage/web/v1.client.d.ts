@@ -4,7 +4,7 @@ import {
   CreateBucketRequest,
   CreateBucketResponse,
   CreateUploadUrlRequest,
-  CreateUploadUrlResponse} from './v1_pb';
+  CreateUploadUrlResponse} from './v1';
 
 export class UploadServiceClient {
   constructor (hostname: string,

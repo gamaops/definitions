@@ -2,7 +2,7 @@ import * as grpcWeb from 'grpc-web';
 
 import {
   AddVehicleRequest,
-  AddVehicleResponse} from './v1_pb';
+  AddVehicleResponse} from './v1';
 
 export class CarrierServiceClient {
   constructor (hostname: string,

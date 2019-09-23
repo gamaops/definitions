@@ -11,7 +11,13 @@ const normalizeDirectories = (filePath: string, relativeDirectory: string) => {
 	const content = fse.readFileSync(filePath).toString()
 	const regex = new RegExp(relativeDirectory.replace(/\//i, '\\/'), 'g');
 
-	fse.outputFileSync(filePath, content.replace(regex, path.dirname(relativeDirectory)+'/web'));
+	fse.outputFileSync(
+		filePath, 
+		content
+			.replace(regex, path.dirname(relativeDirectory)+'/web')
+			.replace(/\_pb\'/g, '\'')
+			.replace(/\_pb.js\'/g, '\'')
+	);
 
 }
 
@@ -40,7 +46,7 @@ const normalizeFields = (filePath: string, fields: Array<string>) => {
 }
 
 const build = () => {
-	const protosPattern = path.join(__dirname, '**/proto/*.proto');
+	const protosPattern = path.join(__dirname, '../**/proto/*.proto');
 
 	const webDirs: Set<string> = new Set();
 
@@ -54,13 +60,14 @@ const build = () => {
 			absolute: true
 		}
 	).forEach((absolute) => {
+	
 		const root = new Root();
 		root.loadSync(absolute);
 		const rootObject = JSON.parse(JSON.stringify(root))
 
 		const fields = jsonpath.paths(rootObject, '$..fields.*').map((paths) => paths.pop()) as Array<string>;
 		
-		const relative = path.relative(__dirname, path.dirname(absolute));
+		const relative = path.relative(path.join(__dirname, '..'), path.dirname(absolute));
 		const fileName = path.basename(absolute);
 		const relativeDir = path.dirname(absolute);
 

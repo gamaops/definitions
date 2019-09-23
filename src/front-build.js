@@ -13,7 +13,10 @@ const change_case_1 = __importDefault(require("change-case"));
 const normalizeDirectories = (filePath, relativeDirectory) => {
     const content = fs_extra_1.default.readFileSync(filePath).toString();
     const regex = new RegExp(relativeDirectory.replace(/\//i, '\\/'), 'g');
-    fs_extra_1.default.outputFileSync(filePath, content.replace(regex, path_1.default.dirname(relativeDirectory) + '/web'));
+    fs_extra_1.default.outputFileSync(filePath, content
+        .replace(regex, path_1.default.dirname(relativeDirectory) + '/web')
+        .replace(/\_pb\'/g, '\'')
+        .replace(/\_pb.js\'/g, '\''));
 };
 const normalizeFields = (filePath, fields) => {
     let content = fs_extra_1.default.readFileSync(filePath).toString();
@@ -31,7 +34,7 @@ const normalizeFields = (filePath, fields) => {
     fs_extra_1.default.outputFileSync(filePath, content);
 };
 const build = () => {
-    const protosPattern = path_1.default.join(__dirname, '**/proto/*.proto');
+    const protosPattern = path_1.default.join(__dirname, '../**/proto/*.proto');
     const webDirs = new Set();
     glob_1.default.sync(protosPattern, {
         nodir: true,
@@ -44,7 +47,7 @@ const build = () => {
         root.loadSync(absolute);
         const rootObject = JSON.parse(JSON.stringify(root));
         const fields = jsonpath_1.default.paths(rootObject, '$..fields.*').map((paths) => paths.pop());
-        const relative = path_1.default.relative(__dirname, path_1.default.dirname(absolute));
+        const relative = path_1.default.relative(path_1.default.join(__dirname, '..'), path_1.default.dirname(absolute));
         const fileName = path_1.default.basename(absolute);
         const relativeDir = path_1.default.dirname(absolute);
         const protocCommand = `protoc -I=../../ ${path_1.default.join(relative, fileName)} --js_out=import_style=commonjs:../../ --grpc-web_out=import_style=commonjs+dts,mode=grpcwebtext:../../`;

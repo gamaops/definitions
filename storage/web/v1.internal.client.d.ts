@@ -2,7 +2,7 @@ import * as grpcWeb from 'grpc-web';
 
 import {
   setUploadUrlRuleRequest,
-  setUploadUrlRuleResponse} from './v1.internal_pb';
+  setUploadUrlRuleResponse} from './v1.internal';
 
 export class UploadAdminServiceClient {
   constructor (hostname: string,

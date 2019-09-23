@@ -13,7 +13,7 @@ grpc.web = require('grpc-web');
 
 const proto = {};
 proto.identity = {};
-proto.identity.v1 = require('./v1_pb.js');
+proto.identity.v1 = require('./v1');
 
 /**
  * @param {string} hostname

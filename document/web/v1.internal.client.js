@@ -14,7 +14,7 @@ grpc.web = require('grpc-web');
 const proto = {};
 proto.document = {};
 proto.document.v1 = {};
-proto.document.v1.internal = require('./v1.internal_pb.js');
+proto.document.v1.internal = require('./v1.internal');
 
 /**
  * @param {string} hostname

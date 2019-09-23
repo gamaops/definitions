@@ -4,7 +4,7 @@ import {
   SignUpLeadRequest,
   SignUpResponse,
   ValidateSignUpRequest,
-  ValidateSignUpResponse} from './v1_pb';
+  ValidateSignUpResponse} from './v1';
 
 export class SignUpServiceClient {
   constructor (hostname: string,

@@ -12,10 +12,10 @@ const grpc = {};
 grpc.web = require('grpc-web');
 
 
-var document_proto_kinds_pb = require('../../document/web/kinds_pb.js')
+var document_proto_kinds_pb = require('../../document/web/kinds')
 const proto = {};
 proto.document = {};
-proto.document.v1 = require('./v1_pb.js');
+proto.document.v1 = require('./v1');
 
 /**
  * @param {string} hostname
