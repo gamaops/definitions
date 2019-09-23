@@ -1,166 +1,61 @@
-/**
- * @fileoverview gRPC-Web generated client stub for document.v1.internal
- * @enhanceable
- * @public
- */
+// package: document.v1.internal
+// file: document/web/v1.internal.proto
 
-// GENERATED CODE -- DO NOT EDIT!
+var document_proto_v1_internal_pb = require("../../document/web/v1.internal");
+var grpc = require("@improbable-eng/grpc-web").grpc;
 
+var DocumentAdminService = (function () {
+  function DocumentAdminService() {}
+  DocumentAdminService.serviceName = "document.v1.internal.DocumentAdminService";
+  return DocumentAdminService;
+}());
 
-
-const grpc = {};
-grpc.web = require('grpc-web');
-
-const proto = {};
-proto.document = {};
-proto.document.v1 = {};
-proto.document.v1.internal = require('./v1.internal');
-
-/**
- * @param {string} hostname
- * @param {?Object} credentials
- * @param {?Object} options
- * @constructor
- * @struct
- * @final
- */
-proto.document.v1.internal.DocumentAdminServiceClient =
-    function(hostname, credentials, options) {
-  if (!options) options = {};
-  options['format'] = 'text';
-
-  /**
-   * @private @const {!grpc.web.GrpcWebClientBase} The client
-   */
-  this.client_ = new grpc.web.GrpcWebClientBase(options);
-
-  /**
-   * @private @const {string} The hostname
-   */
-  this.hostname_ = hostname;
-
-  /**
-   * @private @const {?Object} The credentials to be used to connect
-   *    to the server
-   */
-  this.credentials_ = credentials;
-
-  /**
-   * @private @const {?Object} Options for the client
-   */
-  this.options_ = options;
+DocumentAdminService.setDocumentRule = {
+  methodName: "setDocumentRule",
+  service: DocumentAdminService,
+  requestStream: false,
+  responseStream: false,
+  requestType: document_proto_v1_internal_pb.setDocumentRuleRequest,
+  responseType: document_proto_v1_internal_pb.setDocumentRuleResponse
 };
 
+exports.DocumentAdminService = DocumentAdminService;
 
-/**
- * @param {string} hostname
- * @param {?Object} credentials
- * @param {?Object} options
- * @constructor
- * @struct
- * @final
- */
-proto.document.v1.internal.DocumentAdminServicePromiseClient =
-    function(hostname, credentials, options) {
-  if (!options) options = {};
-  options['format'] = 'text';
+function DocumentAdminServiceClient(serviceHost, options) {
+  this.serviceHost = serviceHost;
+  this.options = options || {};
+}
 
-  /**
-   * @private @const {!grpc.web.GrpcWebClientBase} The client
-   */
-  this.client_ = new grpc.web.GrpcWebClientBase(options);
-
-  /**
-   * @private @const {string} The hostname
-   */
-  this.hostname_ = hostname;
-
-  /**
-   * @private @const {?Object} The credentials to be used to connect
-   *    to the server
-   */
-  this.credentials_ = credentials;
-
-  /**
-   * @private @const {?Object} Options for the client
-   */
-  this.options_ = options;
+DocumentAdminServiceClient.prototype.setDocumentRule = function setDocumentRule(requestMessage, metadata, callback) {
+  if (arguments.length === 2) {
+    callback = arguments[1];
+  }
+  var client = grpc.unary(DocumentAdminService.setDocumentRule, {
+    request: requestMessage,
+    host: this.serviceHost,
+    metadata: metadata,
+    transport: this.options.transport,
+    debug: this.options.debug,
+    onEnd: function (response) {
+      if (callback) {
+        if (response.status !== grpc.Code.OK) {
+          var err = new Error(response.statusMessage);
+          err.code = response.status;
+          err.metadata = response.trailers;
+          callback(err, null);
+        } else {
+          callback(null, response.message);
+        }
+      }
+    }
+  });
+  return {
+    cancel: function () {
+      callback = null;
+      client.close();
+    }
+  };
 };
 
-
-/**
- * @const
- * @type {!grpc.web.MethodDescriptor<
- *   !proto.document.v1.internal.setDocumentRuleRequest,
- *   !proto.document.v1.internal.setDocumentRuleResponse>}
- */
-const methodDescriptor_DocumentAdminService_setDocumentRule = new grpc.web.MethodDescriptor(
-  '/document.v1.internal.DocumentAdminService/setDocumentRule',
-  grpc.web.MethodType.UNARY,
-  proto.document.v1.internal.setDocumentRuleRequest,
-  proto.document.v1.internal.setDocumentRuleResponse,
-  /** @param {!proto.document.v1.internal.setDocumentRuleRequest} request */
-  function(request) {
-    return request.serializeBinary();
-  },
-  proto.document.v1.internal.setDocumentRuleResponse.deserializeBinary
-);
-
-
-/**
- * @const
- * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.document.v1.internal.setDocumentRuleRequest,
- *   !proto.document.v1.internal.setDocumentRuleResponse>}
- */
-const methodInfo_DocumentAdminService_setDocumentRule = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.document.v1.internal.setDocumentRuleResponse,
-  /** @param {!proto.document.v1.internal.setDocumentRuleRequest} request */
-  function(request) {
-    return request.serializeBinary();
-  },
-  proto.document.v1.internal.setDocumentRuleResponse.deserializeBinary
-);
-
-
-/**
- * @param {!proto.document.v1.internal.setDocumentRuleRequest} request The
- *     request proto
- * @param {?Object<string, string>} metadata User defined
- *     call metadata
- * @param {function(?grpc.web.Error, ?proto.document.v1.internal.setDocumentRuleResponse)}
- *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.document.v1.internal.setDocumentRuleResponse>|undefined}
- *     The XHR Node Readable Stream
- */
-proto.document.v1.internal.DocumentAdminServiceClient.prototype.setDocumentRule =
-    function(request, metadata, callback) {
-  return this.client_.rpcCall(this.hostname_ +
-      '/document.v1.internal.DocumentAdminService/setDocumentRule',
-      request,
-      metadata || {},
-      methodDescriptor_DocumentAdminService_setDocumentRule,
-      callback);
-};
-
-
-/**
- * @param {!proto.document.v1.internal.setDocumentRuleRequest} request The
- *     request proto
- * @param {?Object<string, string>} metadata User defined
- *     call metadata
- * @return {!Promise<!proto.document.v1.internal.setDocumentRuleResponse>}
- *     A native promise that resolves to the response
- */
-proto.document.v1.internal.DocumentAdminServicePromiseClient.prototype.setDocumentRule =
-    function(request, metadata) {
-  return this.client_.unaryCall(this.hostname_ +
-      '/document.v1.internal.DocumentAdminService/setDocumentRule',
-      request,
-      metadata || {},
-      methodDescriptor_DocumentAdminService_setDocumentRule);
-};
-
-
-module.exports = proto.document.v1.internal;
+exports.DocumentAdminServiceClient = DocumentAdminServiceClient;
 

@@ -1,6 +1,8 @@
-import * as jspb from "google-protobuf"
+// package: document.v1
+// file: document/web/v1.proto
 
-import * as document_proto_kinds_pb from '../../document/web/kinds';
+import * as jspb from "google-protobuf";
+import * as document_proto_kinds_pb from "../../document/web/kinds";
 
 export class DocumentFile extends jspb.Message {
   getFileId(): string;
@@ -33,6 +35,8 @@ export class DocumentFile extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DocumentFile.AsObject;
   static toObject(includeInstance: boolean, msg: DocumentFile): DocumentFile.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
   static serializeBinaryToWriter(message: DocumentFile, writer: jspb.BinaryWriter): void;
   static deserializeBinary(bytes: Uint8Array): DocumentFile;
   static deserializeBinaryFromReader(message: DocumentFile, reader: jspb.BinaryReader): DocumentFile;
@@ -59,15 +63,15 @@ export class Document extends jspb.Message {
   getSubject(): string;
   setSubject(value: string): void;
 
-  getBraCpf(): document_proto_kinds_pb.BraCpf | undefined;
-  setBraCpf(value?: document_proto_kinds_pb.BraCpf): void;
   hasBracpf(): boolean;
   clearBracpf(): void;
+  getBraCpf(): document_proto_kinds_pb.BraCpf | undefined;
+  setBraCpf(value?: document_proto_kinds_pb.BraCpf): void;
 
-  getBraCnh(): document_proto_kinds_pb.BraCnh | undefined;
-  setBraCnh(value?: document_proto_kinds_pb.BraCnh): void;
   hasBracnh(): boolean;
   clearBracnh(): void;
+  getBraCnh(): document_proto_kinds_pb.BraCnh | undefined;
+  setBraCnh(value?: document_proto_kinds_pb.BraCnh): void;
 
   getCreatedAt(): string;
   setCreatedAt(value: string): void;
@@ -85,10 +89,11 @@ export class Document extends jspb.Message {
   setAudience(value: string): void;
 
   getValueCase(): Document.ValueCase;
-
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Document.AsObject;
   static toObject(includeInstance: boolean, msg: Document): Document.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
   static serializeBinaryToWriter(message: Document, writer: jspb.BinaryWriter): void;
   static deserializeBinary(bytes: Uint8Array): Document;
   static deserializeBinaryFromReader(message: Document, reader: jspb.BinaryReader): Document;
@@ -107,7 +112,7 @@ export namespace Document {
     audience: string,
   }
 
-  export enum ValueCase { 
+  export enum ValueCase {
     VALUE_NOT_SET = 0,
     BRACPF = 3,
     BRACNH = 4,
@@ -115,14 +120,16 @@ export namespace Document {
 }
 
 export class AddDocumentRequest extends jspb.Message {
-  getDocument(): Document | undefined;
-  setDocument(value?: Document): void;
   hasDocument(): boolean;
   clearDocument(): void;
+  getDocument(): Document | undefined;
+  setDocument(value?: Document): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AddDocumentRequest.AsObject;
   static toObject(includeInstance: boolean, msg: AddDocumentRequest): AddDocumentRequest.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
   static serializeBinaryToWriter(message: AddDocumentRequest, writer: jspb.BinaryWriter): void;
   static deserializeBinary(bytes: Uint8Array): AddDocumentRequest;
   static deserializeBinaryFromReader(message: AddDocumentRequest, reader: jspb.BinaryReader): AddDocumentRequest;
@@ -144,6 +151,8 @@ export class AddDocumentResponse extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AddDocumentResponse.AsObject;
   static toObject(includeInstance: boolean, msg: AddDocumentResponse): AddDocumentResponse.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
   static serializeBinaryToWriter(message: AddDocumentResponse, writer: jspb.BinaryWriter): void;
   static deserializeBinary(bytes: Uint8Array): AddDocumentResponse;
   static deserializeBinaryFromReader(message: AddDocumentResponse, reader: jspb.BinaryReader): AddDocumentResponse;

@@ -1,239 +1,101 @@
-/**
- * @fileoverview gRPC-Web generated client stub for identity.v1
- * @enhanceable
- * @public
- */
+// package: identity.v1
+// file: identity/web/v1.proto
 
-// GENERATED CODE -- DO NOT EDIT!
+var identity_proto_v1_pb = require("../../identity/web/v1");
+var grpc = require("@improbable-eng/grpc-web").grpc;
 
+var SignUpService = (function () {
+  function SignUpService() {}
+  SignUpService.serviceName = "identity.v1.SignUpService";
+  return SignUpService;
+}());
 
-
-const grpc = {};
-grpc.web = require('grpc-web');
-
-const proto = {};
-proto.identity = {};
-proto.identity.v1 = require('./v1');
-
-/**
- * @param {string} hostname
- * @param {?Object} credentials
- * @param {?Object} options
- * @constructor
- * @struct
- * @final
- */
-proto.identity.v1.SignUpServiceClient =
-    function(hostname, credentials, options) {
-  if (!options) options = {};
-  options['format'] = 'text';
-
-  /**
-   * @private @const {!grpc.web.GrpcWebClientBase} The client
-   */
-  this.client_ = new grpc.web.GrpcWebClientBase(options);
-
-  /**
-   * @private @const {string} The hostname
-   */
-  this.hostname_ = hostname;
-
-  /**
-   * @private @const {?Object} The credentials to be used to connect
-   *    to the server
-   */
-  this.credentials_ = credentials;
-
-  /**
-   * @private @const {?Object} Options for the client
-   */
-  this.options_ = options;
+SignUpService.SignUpLead = {
+  methodname: "SignUpLead",
+  service: SignUpService,
+  requestStream: false,
+  responseStream: false,
+  requestType: identity_proto_v1_pb.SignUpLeadRequest,
+  responseType: identity_proto_v1_pb.SignUpResponse
 };
 
-
-/**
- * @param {string} hostname
- * @param {?Object} credentials
- * @param {?Object} options
- * @constructor
- * @struct
- * @final
- */
-proto.identity.v1.SignUpServicePromiseClient =
-    function(hostname, credentials, options) {
-  if (!options) options = {};
-  options['format'] = 'text';
-
-  /**
-   * @private @const {!grpc.web.GrpcWebClientBase} The client
-   */
-  this.client_ = new grpc.web.GrpcWebClientBase(options);
-
-  /**
-   * @private @const {string} The hostname
-   */
-  this.hostname_ = hostname;
-
-  /**
-   * @private @const {?Object} The credentials to be used to connect
-   *    to the server
-   */
-  this.credentials_ = credentials;
-
-  /**
-   * @private @const {?Object} Options for the client
-   */
-  this.options_ = options;
+SignUpService.ValidateSignUp = {
+  methodname: "ValidateSignUp",
+  service: SignUpService,
+  requestStream: false,
+  responseStream: false,
+  requestType: identity_proto_v1_pb.ValidateSignUpRequest,
+  responseType: identity_proto_v1_pb.ValidateSignUpResponse
 };
 
+exports.SignUpService = SignUpService;
 
-/**
- * @const
- * @type {!grpc.web.MethodDescriptor<
- *   !proto.identity.v1.SignUpLeadRequest,
- *   !proto.identity.v1.SignUpResponse>}
- */
-const methodDescriptor_SignUpService_SignUpLead = new grpc.web.MethodDescriptor(
-  '/identity.v1.SignUpService/SignUpLead',
-  grpc.web.MethodType.UNARY,
-  proto.identity.v1.SignUpLeadRequest,
-  proto.identity.v1.SignUpResponse,
-  /** @param {!proto.identity.v1.SignUpLeadRequest} request */
-  function(request) {
-    return request.serializeBinary();
-  },
-  proto.identity.v1.SignUpResponse.deserializeBinary
-);
+function SignUpServiceClient(serviceHost, options) {
+  this.serviceHost = serviceHost;
+  this.options = options || {};
+}
 
-
-/**
- * @const
- * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.identity.v1.SignUpLeadRequest,
- *   !proto.identity.v1.SignUpResponse>}
- */
-const methodInfo_SignUpService_SignUpLead = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.identity.v1.SignUpResponse,
-  /** @param {!proto.identity.v1.SignUpLeadRequest} request */
-  function(request) {
-    return request.serializeBinary();
-  },
-  proto.identity.v1.SignUpResponse.deserializeBinary
-);
-
-
-/**
- * @param {!proto.identity.v1.SignUpLeadRequest} request The
- *     request proto
- * @param {?Object<string, string>} metadata User defined
- *     call metadata
- * @param {function(?grpc.web.Error, ?proto.identity.v1.SignUpResponse)}
- *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.identity.v1.SignUpResponse>|undefined}
- *     The XHR Node Readable Stream
- */
-proto.identity.v1.SignUpServiceClient.prototype.signUpLead =
-    function(request, metadata, callback) {
-  return this.client_.rpcCall(this.hostname_ +
-      '/identity.v1.SignUpService/SignUpLead',
-      request,
-      metadata || {},
-      methodDescriptor_SignUpService_SignUpLead,
-      callback);
+SignUpServiceClient.prototype.signUpLead = function signUpLead(requestMessage, metadata, callback) {
+  if (arguments.length === 2) {
+    callback = arguments[1];
+  }
+  var client = grpc.unary(SignUpService.SignUpLead, {
+    request: requestMessage,
+    host: this.serviceHost,
+    metadata: metadata,
+    transport: this.options.transport,
+    debug: this.options.debug,
+    onEnd: function (response) {
+      if (callback) {
+        if (response.status !== grpc.Code.OK) {
+          var err = new Error(response.statusMessage);
+          err.code = response.status;
+          err.metadata = response.trailers;
+          callback(err, null);
+        } else {
+          callback(null, response.message);
+        }
+      }
+    }
+  });
+  return {
+    cancel: function () {
+      callback = null;
+      client.close();
+    }
+  };
 };
 
-
-/**
- * @param {!proto.identity.v1.SignUpLeadRequest} request The
- *     request proto
- * @param {?Object<string, string>} metadata User defined
- *     call metadata
- * @return {!Promise<!proto.identity.v1.SignUpResponse>}
- *     A native promise that resolves to the response
- */
-proto.identity.v1.SignUpServicePromiseClient.prototype.signUpLead =
-    function(request, metadata) {
-  return this.client_.unaryCall(this.hostname_ +
-      '/identity.v1.SignUpService/SignUpLead',
-      request,
-      metadata || {},
-      methodDescriptor_SignUpService_SignUpLead);
+SignUpServiceClient.prototype.validateSignUp = function validateSignUp(requestMessage, metadata, callback) {
+  if (arguments.length === 2) {
+    callback = arguments[1];
+  }
+  var client = grpc.unary(SignUpService.ValidateSignUp, {
+    request: requestMessage,
+    host: this.serviceHost,
+    metadata: metadata,
+    transport: this.options.transport,
+    debug: this.options.debug,
+    onEnd: function (response) {
+      if (callback) {
+        if (response.status !== grpc.Code.OK) {
+          var err = new Error(response.statusMessage);
+          err.code = response.status;
+          err.metadata = response.trailers;
+          callback(err, null);
+        } else {
+          callback(null, response.message);
+        }
+      }
+    }
+  });
+  return {
+    cancel: function () {
+      callback = null;
+      client.close();
+    }
+  };
 };
 
-
-/**
- * @const
- * @type {!grpc.web.MethodDescriptor<
- *   !proto.identity.v1.ValidateSignUpRequest,
- *   !proto.identity.v1.ValidateSignUpResponse>}
- */
-const methodDescriptor_SignUpService_ValidateSignUp = new grpc.web.MethodDescriptor(
-  '/identity.v1.SignUpService/ValidateSignUp',
-  grpc.web.MethodType.UNARY,
-  proto.identity.v1.ValidateSignUpRequest,
-  proto.identity.v1.ValidateSignUpResponse,
-  /** @param {!proto.identity.v1.ValidateSignUpRequest} request */
-  function(request) {
-    return request.serializeBinary();
-  },
-  proto.identity.v1.ValidateSignUpResponse.deserializeBinary
-);
-
-
-/**
- * @const
- * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.identity.v1.ValidateSignUpRequest,
- *   !proto.identity.v1.ValidateSignUpResponse>}
- */
-const methodInfo_SignUpService_ValidateSignUp = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.identity.v1.ValidateSignUpResponse,
-  /** @param {!proto.identity.v1.ValidateSignUpRequest} request */
-  function(request) {
-    return request.serializeBinary();
-  },
-  proto.identity.v1.ValidateSignUpResponse.deserializeBinary
-);
-
-
-/**
- * @param {!proto.identity.v1.ValidateSignUpRequest} request The
- *     request proto
- * @param {?Object<string, string>} metadata User defined
- *     call metadata
- * @param {function(?grpc.web.Error, ?proto.identity.v1.ValidateSignUpResponse)}
- *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.identity.v1.ValidateSignUpResponse>|undefined}
- *     The XHR Node Readable Stream
- */
-proto.identity.v1.SignUpServiceClient.prototype.validateSignUp =
-    function(request, metadata, callback) {
-  return this.client_.rpcCall(this.hostname_ +
-      '/identity.v1.SignUpService/ValidateSignUp',
-      request,
-      metadata || {},
-      methodDescriptor_SignUpService_ValidateSignUp,
-      callback);
-};
-
-
-/**
- * @param {!proto.identity.v1.ValidateSignUpRequest} request The
- *     request proto
- * @param {?Object<string, string>} metadata User defined
- *     call metadata
- * @return {!Promise<!proto.identity.v1.ValidateSignUpResponse>}
- *     A native promise that resolves to the response
- */
-proto.identity.v1.SignUpServicePromiseClient.prototype.validateSignUp =
-    function(request, metadata) {
-  return this.client_.unaryCall(this.hostname_ +
-      '/identity.v1.SignUpService/ValidateSignUp',
-      request,
-      metadata || {},
-      methodDescriptor_SignUpService_ValidateSignUp);
-};
-
-
-module.exports = proto.identity.v1;
+exports.SignUpServiceClient = SignUpServiceClient;
 

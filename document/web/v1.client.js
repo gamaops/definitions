@@ -1,167 +1,61 @@
-/**
- * @fileoverview gRPC-Web generated client stub for document.v1
- * @enhanceable
- * @public
- */
+// package: document.v1
+// file: document/web/v1.proto
 
-// GENERATED CODE -- DO NOT EDIT!
+var document_proto_v1_pb = require("../../document/web/v1");
+var grpc = require("@improbable-eng/grpc-web").grpc;
 
+var DocumentService = (function () {
+  function DocumentService() {}
+  DocumentService.serviceName = "document.v1.DocumentService";
+  return DocumentService;
+}());
 
-
-const grpc = {};
-grpc.web = require('grpc-web');
-
-
-var document_proto_kinds_pb = require('../../document/web/kinds')
-const proto = {};
-proto.document = {};
-proto.document.v1 = require('./v1');
-
-/**
- * @param {string} hostname
- * @param {?Object} credentials
- * @param {?Object} options
- * @constructor
- * @struct
- * @final
- */
-proto.document.v1.DocumentServiceClient =
-    function(hostname, credentials, options) {
-  if (!options) options = {};
-  options['format'] = 'text';
-
-  /**
-   * @private @const {!grpc.web.GrpcWebClientBase} The client
-   */
-  this.client_ = new grpc.web.GrpcWebClientBase(options);
-
-  /**
-   * @private @const {string} The hostname
-   */
-  this.hostname_ = hostname;
-
-  /**
-   * @private @const {?Object} The credentials to be used to connect
-   *    to the server
-   */
-  this.credentials_ = credentials;
-
-  /**
-   * @private @const {?Object} Options for the client
-   */
-  this.options_ = options;
+DocumentService.AddDocument = {
+  methodName: "AddDocument",
+  service: DocumentService,
+  requestStream: false,
+  responseStream: false,
+  requestType: document_proto_v1_pb.AddDocumentRequest,
+  responseType: document_proto_v1_pb.AddDocumentResponse
 };
 
+exports.DocumentService = DocumentService;
 
-/**
- * @param {string} hostname
- * @param {?Object} credentials
- * @param {?Object} options
- * @constructor
- * @struct
- * @final
- */
-proto.document.v1.DocumentServicePromiseClient =
-    function(hostname, credentials, options) {
-  if (!options) options = {};
-  options['format'] = 'text';
+function DocumentServiceClient(serviceHost, options) {
+  this.serviceHost = serviceHost;
+  this.options = options || {};
+}
 
-  /**
-   * @private @const {!grpc.web.GrpcWebClientBase} The client
-   */
-  this.client_ = new grpc.web.GrpcWebClientBase(options);
-
-  /**
-   * @private @const {string} The hostname
-   */
-  this.hostname_ = hostname;
-
-  /**
-   * @private @const {?Object} The credentials to be used to connect
-   *    to the server
-   */
-  this.credentials_ = credentials;
-
-  /**
-   * @private @const {?Object} Options for the client
-   */
-  this.options_ = options;
+DocumentServiceClient.prototype.addDocument = function addDocument(requestMessage, metadata, callback) {
+  if (arguments.length === 2) {
+    callback = arguments[1];
+  }
+  var client = grpc.unary(DocumentService.AddDocument, {
+    request: requestMessage,
+    host: this.serviceHost,
+    metadata: metadata,
+    transport: this.options.transport,
+    debug: this.options.debug,
+    onEnd: function (response) {
+      if (callback) {
+        if (response.status !== grpc.Code.OK) {
+          var err = new Error(response.statusMessage);
+          err.code = response.status;
+          err.metadata = response.trailers;
+          callback(err, null);
+        } else {
+          callback(null, response.message);
+        }
+      }
+    }
+  });
+  return {
+    cancel: function () {
+      callback = null;
+      client.close();
+    }
+  };
 };
 
-
-/**
- * @const
- * @type {!grpc.web.MethodDescriptor<
- *   !proto.document.v1.AddDocumentRequest,
- *   !proto.document.v1.AddDocumentResponse>}
- */
-const methodDescriptor_DocumentService_AddDocument = new grpc.web.MethodDescriptor(
-  '/document.v1.DocumentService/AddDocument',
-  grpc.web.MethodType.UNARY,
-  proto.document.v1.AddDocumentRequest,
-  proto.document.v1.AddDocumentResponse,
-  /** @param {!proto.document.v1.AddDocumentRequest} request */
-  function(request) {
-    return request.serializeBinary();
-  },
-  proto.document.v1.AddDocumentResponse.deserializeBinary
-);
-
-
-/**
- * @const
- * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.document.v1.AddDocumentRequest,
- *   !proto.document.v1.AddDocumentResponse>}
- */
-const methodInfo_DocumentService_AddDocument = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.document.v1.AddDocumentResponse,
-  /** @param {!proto.document.v1.AddDocumentRequest} request */
-  function(request) {
-    return request.serializeBinary();
-  },
-  proto.document.v1.AddDocumentResponse.deserializeBinary
-);
-
-
-/**
- * @param {!proto.document.v1.AddDocumentRequest} request The
- *     request proto
- * @param {?Object<string, string>} metadata User defined
- *     call metadata
- * @param {function(?grpc.web.Error, ?proto.document.v1.AddDocumentResponse)}
- *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.document.v1.AddDocumentResponse>|undefined}
- *     The XHR Node Readable Stream
- */
-proto.document.v1.DocumentServiceClient.prototype.addDocument =
-    function(request, metadata, callback) {
-  return this.client_.rpcCall(this.hostname_ +
-      '/document.v1.DocumentService/AddDocument',
-      request,
-      metadata || {},
-      methodDescriptor_DocumentService_AddDocument,
-      callback);
-};
-
-
-/**
- * @param {!proto.document.v1.AddDocumentRequest} request The
- *     request proto
- * @param {?Object<string, string>} metadata User defined
- *     call metadata
- * @return {!Promise<!proto.document.v1.AddDocumentResponse>}
- *     A native promise that resolves to the response
- */
-proto.document.v1.DocumentServicePromiseClient.prototype.addDocument =
-    function(request, metadata) {
-  return this.client_.unaryCall(this.hostname_ +
-      '/document.v1.DocumentService/AddDocument',
-      request,
-      metadata || {},
-      methodDescriptor_DocumentService_AddDocument);
-};
-
-
-module.exports = proto.document.v1;
+exports.DocumentServiceClient = DocumentServiceClient;
 

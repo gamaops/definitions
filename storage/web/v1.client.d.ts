@@ -1,60 +1,92 @@
-import * as grpcWeb from 'grpc-web';
+// package: storage.v1
+// file: storage/web/v1.proto
 
-import {
-  CreateBucketRequest,
-  CreateBucketResponse,
-  CreateUploadUrlRequest,
-  CreateUploadUrlResponse} from './v1';
+import * as storage_proto_v1_pb from "../../storage/web/v1";
+import {grpc} from "@improbable-eng/grpc-web";
+
+type UploadServiceCreateUploadUrl = {
+  readonly methodname: string;
+  readonly service: typeof UploadService;
+  readonly requestStream: false;
+  readonly responseStream: false;
+  readonly requestType: typeof storage_proto_v1_pb.CreateUploadUrlRequest;
+  readonly responseType: typeof storage_proto_v1_pb.CreateUploadUrlResponse;
+};
+
+export class UploadService {
+  static readonly servicename: string;
+  static readonly Createuploadurl: UploadServiceCreateUploadUrl;
+}
+
+type StorageServiceCreateBucket = {
+  readonly methodname: string;
+  readonly service: typeof StorageService;
+  readonly requestStream: false;
+  readonly responseStream: false;
+  readonly requestType: typeof storage_proto_v1_pb.CreateBucketRequest;
+  readonly responseType: typeof storage_proto_v1_pb.CreateBucketResponse;
+};
+
+export class StorageService {
+  static readonly servicename: string;
+  static readonly Createbucket: StorageServiceCreateBucket;
+}
+
+export type ServiceError = { message: string, code: number; metadata: grpc.Metadata }
+export type Status = { details: string, code: number; metadata: grpc.Metadata }
+
+interface UnaryResponse {
+  cancel(): void;
+}
+interface ResponseStream<T> {
+  cancel(): void;
+  on(type: 'data', handler: (message: T) => void): ResponseStream<T>;
+  on(type: 'end', handler: (status?: Status) => void): ResponseStream<T>;
+  on(type: 'status', handler: (status: Status) => void): ResponseStream<T>;
+}
+interface RequestStream<T> {
+  write(message: T): RequestStream<T>;
+  end(): void;
+  cancel(): void;
+  on(type: 'end', handler: (status?: Status) => void): RequestStream<T>;
+  on(type: 'status', handler: (status: Status) => void): RequestStream<T>;
+}
+interface BidirectionalStream<ReqT, ResT> {
+  write(message: ReqT): BidirectionalStream<ReqT, ResT>;
+  end(): void;
+  cancel(): void;
+  on(type: 'data', handler: (message: ResT) => void): BidirectionalStream<ReqT, ResT>;
+  on(type: 'end', handler: (status?: Status) => void): BidirectionalStream<ReqT, ResT>;
+  on(type: 'status', handler: (status: Status) => void): BidirectionalStream<ReqT, ResT>;
+}
 
 export class UploadServiceClient {
-  constructor (hostname: string,
-               credentials?: null | { [index: string]: string; },
-               options?: null | { [index: string]: string; });
+  readonly serviceHost: string;
 
+  constructor(serviceHost: string, options?: grpc.RpcOptions);
   createUploadUrl(
-    request: CreateUploadUrlRequest,
-    metadata: grpcWeb.Metadata | undefined,
-    callback: (err: grpcWeb.Error,
-               response: CreateUploadUrlResponse) => void
-  ): grpcWeb.ClientReadableStream<CreateUploadUrlResponse>;
-
+    requestMessage: storage_proto_v1_pb.CreateUploadUrlRequest,
+    metadata: grpc.Metadata,
+    callback: (error: ServiceError|null, responseMessage: storage_proto_v1_pb.CreateUploadUrlResponse|null) => void
+  ): UnaryResponse;
+  createUploadUrl(
+    requestMessage: storage_proto_v1_pb.CreateUploadUrlRequest,
+    callback: (error: ServiceError|null, responseMessage: storage_proto_v1_pb.CreateUploadUrlResponse|null) => void
+  ): UnaryResponse;
 }
 
 export class StorageServiceClient {
-  constructor (hostname: string,
-               credentials?: null | { [index: string]: string; },
-               options?: null | { [index: string]: string; });
+  readonly serviceHost: string;
 
+  constructor(serviceHost: string, options?: grpc.RpcOptions);
   createBucket(
-    request: CreateBucketRequest,
-    metadata: grpcWeb.Metadata | undefined,
-    callback: (err: grpcWeb.Error,
-               response: CreateBucketResponse) => void
-  ): grpcWeb.ClientReadableStream<CreateBucketResponse>;
-
-}
-
-export class UploadServicePromiseClient {
-  constructor (hostname: string,
-               credentials?: null | { [index: string]: string; },
-               options?: null | { [index: string]: string; });
-
-  createUploadUrl(
-    request: CreateUploadUrlRequest,
-    metadata?: grpcWeb.Metadata
-  ): Promise<CreateUploadUrlResponse>;
-
-}
-
-export class StorageServicePromiseClient {
-  constructor (hostname: string,
-               credentials?: null | { [index: string]: string; },
-               options?: null | { [index: string]: string; });
-
+    requestMessage: storage_proto_v1_pb.CreateBucketRequest,
+    metadata: grpc.Metadata,
+    callback: (error: ServiceError|null, responseMessage: storage_proto_v1_pb.CreateBucketResponse|null) => void
+  ): UnaryResponse;
   createBucket(
-    request: CreateBucketRequest,
-    metadata?: grpcWeb.Metadata
-  ): Promise<CreateBucketResponse>;
-
+    requestMessage: storage_proto_v1_pb.CreateBucketRequest,
+    callback: (error: ServiceError|null, responseMessage: storage_proto_v1_pb.CreateBucketResponse|null) => void
+  ): UnaryResponse;
 }
 

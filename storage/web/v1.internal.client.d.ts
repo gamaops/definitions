@@ -1,32 +1,63 @@
-import * as grpcWeb from 'grpc-web';
+// package: storage.v1.internal
+// file: storage/web/v1.internal.proto
 
-import {
-  setUploadUrlRuleRequest,
-  setUploadUrlRuleResponse} from './v1.internal';
+import * as storage_proto_v1_internal_pb from "../../storage/web/v1.internal";
+import {grpc} from "@improbable-eng/grpc-web";
 
-export class UploadAdminServiceClient {
-  constructor (hostname: string,
-               credentials?: null | { [index: string]: string; },
-               options?: null | { [index: string]: string; });
+type UploadAdminServicesetUploadUrlRule = {
+  readonly methodName: string;
+  readonly service: typeof UploadAdminService;
+  readonly requestStream: false;
+  readonly responseStream: false;
+  readonly requestType: typeof storage_proto_v1_internal_pb.setUploadUrlRuleRequest;
+  readonly responseType: typeof storage_proto_v1_internal_pb.setUploadUrlRuleResponse;
+};
 
-  setUploadUrlRule(
-    request: setUploadUrlRuleRequest,
-    metadata: grpcWeb.Metadata | undefined,
-    callback: (err: grpcWeb.Error,
-               response: setUploadUrlRuleResponse) => void
-  ): grpcWeb.ClientReadableStream<setUploadUrlRuleResponse>;
-
+export class UploadAdminService {
+  static readonly serviceName: string;
+  static readonly setuploadUrlRule: UploadAdminServicesetUploadUrlRule;
 }
 
-export class UploadAdminServicePromiseClient {
-  constructor (hostname: string,
-               credentials?: null | { [index: string]: string; },
-               options?: null | { [index: string]: string; });
+export type ServiceError = { message: string, code: number; metadata: grpc.Metadata }
+export type Status = { details: string, code: number; metadata: grpc.Metadata }
 
+interface UnaryResponse {
+  cancel(): void;
+}
+interface ResponseStream<T> {
+  cancel(): void;
+  on(type: 'data', handler: (message: T) => void): ResponseStream<T>;
+  on(type: 'end', handler: (status?: Status) => void): ResponseStream<T>;
+  on(type: 'status', handler: (status: Status) => void): ResponseStream<T>;
+}
+interface RequestStream<T> {
+  write(message: T): RequestStream<T>;
+  end(): void;
+  cancel(): void;
+  on(type: 'end', handler: (status?: Status) => void): RequestStream<T>;
+  on(type: 'status', handler: (status: Status) => void): RequestStream<T>;
+}
+interface BidirectionalStream<ReqT, ResT> {
+  write(message: ReqT): BidirectionalStream<ReqT, ResT>;
+  end(): void;
+  cancel(): void;
+  on(type: 'data', handler: (message: ResT) => void): BidirectionalStream<ReqT, ResT>;
+  on(type: 'end', handler: (status?: Status) => void): BidirectionalStream<ReqT, ResT>;
+  on(type: 'status', handler: (status: Status) => void): BidirectionalStream<ReqT, ResT>;
+}
+
+export class UploadAdminServiceClient {
+  readonly serviceHost: string;
+
+  constructor(serviceHost: string, options?: grpc.RpcOptions);
   setUploadUrlRule(
-    request: setUploadUrlRuleRequest,
-    metadata?: grpcWeb.Metadata
-  ): Promise<setUploadUrlRuleResponse>;
-
+    requestMessage: storage_proto_v1_internal_pb.setUploadUrlRuleRequest,
+    metadata: grpc.Metadata,
+    callback: (error: ServiceError|null, responseMessage: storage_proto_v1_internal_pb.setUploadUrlRuleResponse|null) => void
+  ): UnaryResponse;
+  setUploadUrlRule(
+    requestMessage: storage_proto_v1_internal_pb.setUploadUrlRuleRequest,
+    callback: (error: ServiceError|null, responseMessage: storage_proto_v1_internal_pb.setUploadUrlRuleResponse|null) => void
+  ): UnaryResponse;
 }
 

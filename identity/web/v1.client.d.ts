@@ -1,46 +1,82 @@
-import * as grpcWeb from 'grpc-web';
+// package: identity.v1
+// file: identity/web/v1.proto
 
-import {
-  SignUpLeadRequest,
-  SignUpResponse,
-  ValidateSignUpRequest,
-  ValidateSignUpResponse} from './v1';
+import * as identity_proto_v1_pb from "../../identity/web/v1";
+import {grpc} from "@improbable-eng/grpc-web";
 
-export class SignUpServiceClient {
-  constructor (hostname: string,
-               credentials?: null | { [index: string]: string; },
-               options?: null | { [index: string]: string; });
+type SignUpServiceSignUpLead = {
+  readonly methodname: string;
+  readonly service: typeof SignUpService;
+  readonly requestStream: false;
+  readonly responseStream: false;
+  readonly requestType: typeof identity_proto_v1_pb.SignUpLeadRequest;
+  readonly responseType: typeof identity_proto_v1_pb.SignUpResponse;
+};
 
-  signUpLead(
-    request: SignUpLeadRequest,
-    metadata: grpcWeb.Metadata | undefined,
-    callback: (err: grpcWeb.Error,
-               response: SignUpResponse) => void
-  ): grpcWeb.ClientReadableStream<SignUpResponse>;
+type SignUpServiceValidateSignUp = {
+  readonly methodname: string;
+  readonly service: typeof SignUpService;
+  readonly requestStream: false;
+  readonly responseStream: false;
+  readonly requestType: typeof identity_proto_v1_pb.ValidateSignUpRequest;
+  readonly responseType: typeof identity_proto_v1_pb.ValidateSignUpResponse;
+};
 
-  validateSignUp(
-    request: ValidateSignUpRequest,
-    metadata: grpcWeb.Metadata | undefined,
-    callback: (err: grpcWeb.Error,
-               response: ValidateSignUpResponse) => void
-  ): grpcWeb.ClientReadableStream<ValidateSignUpResponse>;
-
+export class SignUpService {
+  static readonly servicename: string;
+  static readonly signUpLead: SignUpServiceSignUpLead;
+  static readonly ValidateSignUp: SignUpServiceValidateSignUp;
 }
 
-export class SignUpServicePromiseClient {
-  constructor (hostname: string,
-               credentials?: null | { [index: string]: string; },
-               options?: null | { [index: string]: string; });
+export type ServiceError = { message: string, code: number; metadata: grpc.Metadata }
+export type Status = { details: string, code: number; metadata: grpc.Metadata }
 
+interface UnaryResponse {
+  cancel(): void;
+}
+interface ResponseStream<T> {
+  cancel(): void;
+  on(type: 'data', handler: (message: T) => void): ResponseStream<T>;
+  on(type: 'end', handler: (status?: Status) => void): ResponseStream<T>;
+  on(type: 'status', handler: (status: Status) => void): ResponseStream<T>;
+}
+interface RequestStream<T> {
+  write(message: T): RequestStream<T>;
+  end(): void;
+  cancel(): void;
+  on(type: 'end', handler: (status?: Status) => void): RequestStream<T>;
+  on(type: 'status', handler: (status: Status) => void): RequestStream<T>;
+}
+interface BidirectionalStream<ReqT, ResT> {
+  write(message: ReqT): BidirectionalStream<ReqT, ResT>;
+  end(): void;
+  cancel(): void;
+  on(type: 'data', handler: (message: ResT) => void): BidirectionalStream<ReqT, ResT>;
+  on(type: 'end', handler: (status?: Status) => void): BidirectionalStream<ReqT, ResT>;
+  on(type: 'status', handler: (status: Status) => void): BidirectionalStream<ReqT, ResT>;
+}
+
+export class SignUpServiceClient {
+  readonly serviceHost: string;
+
+  constructor(serviceHost: string, options?: grpc.RpcOptions);
   signUpLead(
-    request: SignUpLeadRequest,
-    metadata?: grpcWeb.Metadata
-  ): Promise<SignUpResponse>;
-
+    requestMessage: identity_proto_v1_pb.SignUpLeadRequest,
+    metadata: grpc.Metadata,
+    callback: (error: ServiceError|null, responseMessage: identity_proto_v1_pb.SignUpResponse|null) => void
+  ): UnaryResponse;
+  signUpLead(
+    requestMessage: identity_proto_v1_pb.SignUpLeadRequest,
+    callback: (error: ServiceError|null, responseMessage: identity_proto_v1_pb.SignUpResponse|null) => void
+  ): UnaryResponse;
   validateSignUp(
-    request: ValidateSignUpRequest,
-    metadata?: grpcWeb.Metadata
-  ): Promise<ValidateSignUpResponse>;
-
+    requestMessage: identity_proto_v1_pb.ValidateSignUpRequest,
+    metadata: grpc.Metadata,
+    callback: (error: ServiceError|null, responseMessage: identity_proto_v1_pb.ValidateSignUpResponse|null) => void
+  ): UnaryResponse;
+  validateSignUp(
+    requestMessage: identity_proto_v1_pb.ValidateSignUpRequest,
+    callback: (error: ServiceError|null, responseMessage: identity_proto_v1_pb.ValidateSignUpResponse|null) => void
+  ): UnaryResponse;
 }
 

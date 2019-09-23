@@ -16,6 +16,7 @@ const normalizeDirectories = (filePath: string, relativeDirectory: string) => {
 		content
 			.replace(regex, path.dirname(relativeDirectory)+'/web')
 			.replace(/\_pb\'/g, '\'')
+			.replace(/\_pb\"/g, '"')
 			.replace(/\_pb.js\'/g, '\'')
 	);
 
@@ -71,7 +72,7 @@ const build = () => {
 		const fileName = path.basename(absolute);
 		const relativeDir = path.dirname(absolute);
 
-		const protocCommand = `protoc -I=../../ ${path.join(relative, fileName)} --js_out=import_style=commonjs:../../ --grpc-web_out=import_style=commonjs+dts,mode=grpcwebtext:../../`;
+		const protocCommand = `protoc -I=../../ -I=${path.join(__dirname, '../')} ${path.join(relative, fileName)} --plugin="protoc-gen-ts=${path.join(__dirname, '../node_modules/.bin/protoc-gen-ts')}" --js_out="import_style=commonjs,binary:../../" --ts_out="service=grpc-web:../../"`;
 
 		execSync(
 			protocCommand,
@@ -109,6 +110,7 @@ const build = () => {
 				path.join(
 					webDir,
 					path.basename(generatedFile)
+						.replace(/_service/, '.client')
 						.replace(/_grpc_web_pb/, '.client')
 						.replace(/_pb/, '')
 				),

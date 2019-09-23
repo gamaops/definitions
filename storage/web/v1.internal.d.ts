@@ -1,13 +1,16 @@
-import * as jspb from "google-protobuf"
+// package: storage.v1.internal
+// file: storage/web/v1.internal.proto
+
+import * as jspb from "google-protobuf";
 
 export class UploadUrlRule extends jspb.Message {
   getAudience(): string;
   setAudience(value: string): void;
 
-  getLimits(): UploadUrlRule.Limits | undefined;
-  setLimits(value?: UploadUrlRule.Limits): void;
   hasLimits(): boolean;
   clearLimits(): void;
+  getLimits(): UploadUrlRule.Limits | undefined;
+  setLimits(value?: UploadUrlRule.Limits): void;
 
   getBucketId(): string;
   setBucketId(value: string): void;
@@ -15,6 +18,8 @@ export class UploadUrlRule extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UploadUrlRule.AsObject;
   static toObject(includeInstance: boolean, msg: UploadUrlRule): UploadUrlRule.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
   static serializeBinaryToWriter(message: UploadUrlRule, writer: jspb.BinaryWriter): void;
   static deserializeBinary(bytes: Uint8Array): UploadUrlRule;
   static deserializeBinaryFromReader(message: UploadUrlRule, reader: jspb.BinaryReader): UploadUrlRule;
@@ -34,6 +39,8 @@ export namespace UploadUrlRule {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Limits.AsObject;
     static toObject(includeInstance: boolean, msg: Limits): Limits.AsObject;
+    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
     static serializeBinaryToWriter(message: Limits, writer: jspb.BinaryWriter): void;
     static deserializeBinary(bytes: Uint8Array): Limits;
     static deserializeBinaryFromReader(message: Limits, reader: jspb.BinaryReader): Limits;
@@ -44,18 +51,19 @@ export namespace UploadUrlRule {
       maxFileCount: number,
     }
   }
-
 }
 
 export class setUploadUrlRuleRequest extends jspb.Message {
-  getUploadUrlRule(): UploadUrlRule | undefined;
-  setUploadUrlRule(value?: UploadUrlRule): void;
   hasUploadurlrule(): boolean;
   clearUploadurlrule(): void;
+  getUploadUrlRule(): UploadUrlRule | undefined;
+  setUploadUrlRule(value?: UploadUrlRule): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): setUploadUrlRuleRequest.AsObject;
   static toObject(includeInstance: boolean, msg: setUploadUrlRuleRequest): setUploadUrlRuleRequest.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
   static serializeBinaryToWriter(message: setUploadUrlRuleRequest, writer: jspb.BinaryWriter): void;
   static deserializeBinary(bytes: Uint8Array): setUploadUrlRuleRequest;
   static deserializeBinaryFromReader(message: setUploadUrlRuleRequest, reader: jspb.BinaryReader): setUploadUrlRuleRequest;
@@ -74,6 +82,8 @@ export class setUploadUrlRuleResponse extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): setUploadUrlRuleResponse.AsObject;
   static toObject(includeInstance: boolean, msg: setUploadUrlRuleResponse): setUploadUrlRuleResponse.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
   static serializeBinaryToWriter(message: setUploadUrlRuleResponse, writer: jspb.BinaryWriter): void;
   static deserializeBinary(bytes: Uint8Array): setUploadUrlRuleResponse;
   static deserializeBinaryFromReader(message: setUploadUrlRuleResponse, reader: jspb.BinaryReader): setUploadUrlRuleResponse;
