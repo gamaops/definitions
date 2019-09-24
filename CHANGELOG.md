@@ -1,3 +1,12 @@
+## 2019-09-24T11:47:27.935Z
+### 🆕 - add code or file(s) (type)
+
+#### none
+
+- Fix some types naming parsing
+
+-----------------------------
+
 ## 2019-09-23T20:40:49.841Z
 ### 🐛 - fixing a bug (type)
 
