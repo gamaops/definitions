@@ -63,13 +63,13 @@ export class Document extends jspb.Message {
   getSubject(): string;
   setSubject(value: string): void;
 
-  hasBracpf(): boolean;
-  clearBracpf(): void;
+  hasBraCpf(): boolean;
+  clearBraCpf(): void;
   getBraCpf(): document_proto_kinds_pb.BraCpf | undefined;
   setBraCpf(value?: document_proto_kinds_pb.BraCpf): void;
 
-  hasBracnh(): boolean;
-  clearBracnh(): void;
+  hasBraCnh(): boolean;
+  clearBraCnh(): void;
   getBraCnh(): document_proto_kinds_pb.BraCnh | undefined;
   setBraCnh(value?: document_proto_kinds_pb.BraCnh): void;
 

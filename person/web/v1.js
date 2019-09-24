@@ -340,13 +340,13 @@ proto.person.v1.Lead.ValidationChannel = {
  * optional string leadId = 1;
  * @return {string}
  */
-proto.person.v1.Lead.prototype.getLeadId = function() {
+proto.person.v1.Lead.prototype.getLeadid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.person.v1.Lead.prototype.setLeadId = function(value) {
+proto.person.v1.Lead.prototype.setLeadid = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -400,13 +400,13 @@ proto.person.v1.Lead.prototype.setCellphone = function(value) {
  * optional ValidationChannel validationChannel = 5;
  * @return {!proto.person.v1.Lead.ValidationChannel}
  */
-proto.person.v1.Lead.prototype.getValidationChannel = function() {
+proto.person.v1.Lead.prototype.getValidationchannel = function() {
   return /** @type {!proto.person.v1.Lead.ValidationChannel} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
 };
 
 
 /** @param {!proto.person.v1.Lead.ValidationChannel} value */
-proto.person.v1.Lead.prototype.setValidationChannel = function(value) {
+proto.person.v1.Lead.prototype.setValidationchannel = function(value) {
   jspb.Message.setProto3EnumField(this, 5, value);
 };
 
@@ -415,13 +415,13 @@ proto.person.v1.Lead.prototype.setValidationChannel = function(value) {
  * optional string createdAt = 6;
  * @return {string}
  */
-proto.person.v1.Lead.prototype.getCreatedAt = function() {
+proto.person.v1.Lead.prototype.getCreatedat = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
 };
 
 
 /** @param {string} value */
-proto.person.v1.Lead.prototype.setCreatedAt = function(value) {
+proto.person.v1.Lead.prototype.setCreatedat = function(value) {
   jspb.Message.setProto3StringField(this, 6, value);
 };
 
@@ -430,13 +430,13 @@ proto.person.v1.Lead.prototype.setCreatedAt = function(value) {
  * optional string createdJobId = 7;
  * @return {string}
  */
-proto.person.v1.Lead.prototype.getCreatedJobId = function() {
+proto.person.v1.Lead.prototype.getCreatedjobid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
 };
 
 
 /** @param {string} value */
-proto.person.v1.Lead.prototype.setCreatedJobId = function(value) {
+proto.person.v1.Lead.prototype.setCreatedjobid = function(value) {
   jspb.Message.setProto3StringField(this, 7, value);
 };
 
@@ -445,13 +445,13 @@ proto.person.v1.Lead.prototype.setCreatedJobId = function(value) {
  * optional string updatedAt = 8;
  * @return {string}
  */
-proto.person.v1.Lead.prototype.getUpdatedAt = function() {
+proto.person.v1.Lead.prototype.getUpdatedat = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
 };
 
 
 /** @param {string} value */
-proto.person.v1.Lead.prototype.setUpdatedAt = function(value) {
+proto.person.v1.Lead.prototype.setUpdatedat = function(value) {
   jspb.Message.setProto3StringField(this, 8, value);
 };
 
@@ -460,13 +460,13 @@ proto.person.v1.Lead.prototype.setUpdatedAt = function(value) {
  * optional string updatedJobId = 9;
  * @return {string}
  */
-proto.person.v1.Lead.prototype.getUpdatedJobId = function() {
+proto.person.v1.Lead.prototype.getUpdatedjobid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 9, ""));
 };
 
 
 /** @param {string} value */
-proto.person.v1.Lead.prototype.setUpdatedJobId = function(value) {
+proto.person.v1.Lead.prototype.setUpdatedjobid = function(value) {
   jspb.Message.setProto3StringField(this, 9, value);
 };
 
@@ -730,13 +730,13 @@ proto.person.v1.CreateLeadResponse.serializeBinaryToWriter = function(message, w
  * optional string leadId = 1;
  * @return {string}
  */
-proto.person.v1.CreateLeadResponse.prototype.getLeadId = function() {
+proto.person.v1.CreateLeadResponse.prototype.getLeadid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.person.v1.CreateLeadResponse.prototype.setLeadId = function(value) {
+proto.person.v1.CreateLeadResponse.prototype.setLeadid = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -867,13 +867,13 @@ proto.person.v1.VerifyLeadRequest.serializeBinaryToWriter = function(message, wr
  * optional string leadId = 1;
  * @return {string}
  */
-proto.person.v1.VerifyLeadRequest.prototype.getLeadId = function() {
+proto.person.v1.VerifyLeadRequest.prototype.getLeadid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.person.v1.VerifyLeadRequest.prototype.setLeadId = function(value) {
+proto.person.v1.VerifyLeadRequest.prototype.setLeadid = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -882,13 +882,13 @@ proto.person.v1.VerifyLeadRequest.prototype.setLeadId = function(value) {
  * optional string validationCode = 2;
  * @return {string}
  */
-proto.person.v1.VerifyLeadRequest.prototype.getValidationCode = function() {
+proto.person.v1.VerifyLeadRequest.prototype.getValidationcode = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.person.v1.VerifyLeadRequest.prototype.setValidationCode = function(value) {
+proto.person.v1.VerifyLeadRequest.prototype.setValidationcode = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -1019,13 +1019,13 @@ proto.person.v1.VerifyLeadResponse.serializeBinaryToWriter = function(message, w
  * optional string personId = 1;
  * @return {string}
  */
-proto.person.v1.VerifyLeadResponse.prototype.getPersonId = function() {
+proto.person.v1.VerifyLeadResponse.prototype.getPersonid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.person.v1.VerifyLeadResponse.prototype.setPersonId = function(value) {
+proto.person.v1.VerifyLeadResponse.prototype.setPersonid = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 

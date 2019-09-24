@@ -487,13 +487,13 @@ proto.storage.v1.File.Status = {
  * optional string fileId = 1;
  * @return {string}
  */
-proto.storage.v1.File.prototype.getFileId = function() {
+proto.storage.v1.File.prototype.getFileid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.storage.v1.File.prototype.setFileId = function(value) {
+proto.storage.v1.File.prototype.setFileid = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -517,13 +517,13 @@ proto.storage.v1.File.prototype.setPath = function(value) {
  * optional string mimeType = 3;
  * @return {string}
  */
-proto.storage.v1.File.prototype.getMimeType = function() {
+proto.storage.v1.File.prototype.getMimetype = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /** @param {string} value */
-proto.storage.v1.File.prototype.setMimeType = function(value) {
+proto.storage.v1.File.prototype.setMimetype = function(value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
 
@@ -564,13 +564,13 @@ proto.storage.v1.File.prototype.clearTagsList = function() {
  * optional string bucketId = 5;
  * @return {string}
  */
-proto.storage.v1.File.prototype.getBucketId = function() {
+proto.storage.v1.File.prototype.getBucketid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
 
 
 /** @param {string} value */
-proto.storage.v1.File.prototype.setBucketId = function(value) {
+proto.storage.v1.File.prototype.setBucketid = function(value) {
   jspb.Message.setProto3StringField(this, 5, value);
 };
 
@@ -594,13 +594,13 @@ proto.storage.v1.File.prototype.setSize = function(value) {
  * optional string uploadUrl = 7;
  * @return {string}
  */
-proto.storage.v1.File.prototype.getUploadUrl = function() {
+proto.storage.v1.File.prototype.getUploadurl = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
 };
 
 
 /** @param {string} value */
-proto.storage.v1.File.prototype.setUploadUrl = function(value) {
+proto.storage.v1.File.prototype.setUploadurl = function(value) {
   jspb.Message.setProto3StringField(this, 7, value);
 };
 
@@ -654,13 +654,13 @@ proto.storage.v1.File.prototype.setName = function(value) {
  * optional string createdAt = 11;
  * @return {string}
  */
-proto.storage.v1.File.prototype.getCreatedAt = function() {
+proto.storage.v1.File.prototype.getCreatedat = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 11, ""));
 };
 
 
 /** @param {string} value */
-proto.storage.v1.File.prototype.setCreatedAt = function(value) {
+proto.storage.v1.File.prototype.setCreatedat = function(value) {
   jspb.Message.setProto3StringField(this, 11, value);
 };
 
@@ -669,13 +669,13 @@ proto.storage.v1.File.prototype.setCreatedAt = function(value) {
  * optional string createdJobId = 12;
  * @return {string}
  */
-proto.storage.v1.File.prototype.getCreatedJobId = function() {
+proto.storage.v1.File.prototype.getCreatedjobid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 12, ""));
 };
 
 
 /** @param {string} value */
-proto.storage.v1.File.prototype.setCreatedJobId = function(value) {
+proto.storage.v1.File.prototype.setCreatedjobid = function(value) {
   jspb.Message.setProto3StringField(this, 12, value);
 };
 
@@ -684,13 +684,13 @@ proto.storage.v1.File.prototype.setCreatedJobId = function(value) {
  * optional string updatedAt = 13;
  * @return {string}
  */
-proto.storage.v1.File.prototype.getUpdatedAt = function() {
+proto.storage.v1.File.prototype.getUpdatedat = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 13, ""));
 };
 
 
 /** @param {string} value */
-proto.storage.v1.File.prototype.setUpdatedAt = function(value) {
+proto.storage.v1.File.prototype.setUpdatedat = function(value) {
   jspb.Message.setProto3StringField(this, 13, value);
 };
 
@@ -699,13 +699,13 @@ proto.storage.v1.File.prototype.setUpdatedAt = function(value) {
  * optional string updatedJobId = 14;
  * @return {string}
  */
-proto.storage.v1.File.prototype.getUpdatedJobId = function() {
+proto.storage.v1.File.prototype.getUpdatedjobid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 14, ""));
 };
 
 
 /** @param {string} value */
-proto.storage.v1.File.prototype.setUpdatedJobId = function(value) {
+proto.storage.v1.File.prototype.setUpdatedjobid = function(value) {
   jspb.Message.setProto3StringField(this, 14, value);
 };
 
@@ -824,7 +824,7 @@ proto.storage.v1.Bucket.deserializeBinaryFromReader = function(msg, reader) {
       break;
     case 4:
       var value = /** @type {string} */ (reader.readString());
-      msg.addAcceptedmimetypes(value);
+      msg.addAcceptedMimeTypes(value);
       break;
     case 5:
       var value = /** @type {number} */ (reader.readUint32());
@@ -1129,13 +1129,13 @@ proto.storage.v1.Bucket.Upload.prototype.setUrl = function(value) {
  * optional uint32 tokenExpirationSeconds = 2;
  * @return {number}
  */
-proto.storage.v1.Bucket.Upload.prototype.getTokenExpirationSeconds = function() {
+proto.storage.v1.Bucket.Upload.prototype.getTokenexpirationseconds = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /** @param {number} value */
-proto.storage.v1.Bucket.Upload.prototype.setTokenExpirationSeconds = function(value) {
+proto.storage.v1.Bucket.Upload.prototype.setTokenexpirationseconds = function(value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
 
@@ -1144,13 +1144,13 @@ proto.storage.v1.Bucket.Upload.prototype.setTokenExpirationSeconds = function(va
  * optional string fieldName = 3;
  * @return {string}
  */
-proto.storage.v1.Bucket.Upload.prototype.getFieldName = function() {
+proto.storage.v1.Bucket.Upload.prototype.getFieldname = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /** @param {string} value */
-proto.storage.v1.Bucket.Upload.prototype.setFieldName = function(value) {
+proto.storage.v1.Bucket.Upload.prototype.setFieldname = function(value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
 
@@ -1159,13 +1159,13 @@ proto.storage.v1.Bucket.Upload.prototype.setFieldName = function(value) {
  * optional uint32 maxCount = 4;
  * @return {number}
  */
-proto.storage.v1.Bucket.Upload.prototype.getMaxCount = function() {
+proto.storage.v1.Bucket.Upload.prototype.getMaxcount = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
 
 /** @param {number} value */
-proto.storage.v1.Bucket.Upload.prototype.setMaxCount = function(value) {
+proto.storage.v1.Bucket.Upload.prototype.setMaxcount = function(value) {
   jspb.Message.setProto3IntField(this, 4, value);
 };
 
@@ -1174,13 +1174,13 @@ proto.storage.v1.Bucket.Upload.prototype.setMaxCount = function(value) {
  * optional string bucketId = 1;
  * @return {string}
  */
-proto.storage.v1.Bucket.prototype.getBucketId = function() {
+proto.storage.v1.Bucket.prototype.getBucketid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.storage.v1.Bucket.prototype.setBucketId = function(value) {
+proto.storage.v1.Bucket.prototype.setBucketid = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -1237,13 +1237,13 @@ proto.storage.v1.Bucket.prototype.hasUpload = function() {
  * repeated string acceptedMimeTypes = 4;
  * @return {!Array<string>}
  */
-proto.storage.v1.Bucket.prototype.getAcceptedMimeTypesList = function() {
+proto.storage.v1.Bucket.prototype.getAcceptedmimetypesList = function() {
   return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 4));
 };
 
 
 /** @param {!Array<string>} value */
-proto.storage.v1.Bucket.prototype.setAcceptedMimeTypesList = function(value) {
+proto.storage.v1.Bucket.prototype.setAcceptedmimetypesList = function(value) {
   jspb.Message.setField(this, 4, value || []);
 };
 
@@ -1269,13 +1269,13 @@ proto.storage.v1.Bucket.prototype.clearAcceptedmimetypesList = function() {
  * optional uint32 maxSize = 5;
  * @return {number}
  */
-proto.storage.v1.Bucket.prototype.getMaxSize = function() {
+proto.storage.v1.Bucket.prototype.getMaxsize = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
 };
 
 
 /** @param {number} value */
-proto.storage.v1.Bucket.prototype.setMaxSize = function(value) {
+proto.storage.v1.Bucket.prototype.setMaxsize = function(value) {
   jspb.Message.setProto3IntField(this, 5, value);
 };
 
@@ -1331,13 +1331,13 @@ proto.storage.v1.Bucket.prototype.setProcessor = function(value) {
  * optional string createdAt = 8;
  * @return {string}
  */
-proto.storage.v1.Bucket.prototype.getCreatedAt = function() {
+proto.storage.v1.Bucket.prototype.getCreatedat = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
 };
 
 
 /** @param {string} value */
-proto.storage.v1.Bucket.prototype.setCreatedAt = function(value) {
+proto.storage.v1.Bucket.prototype.setCreatedat = function(value) {
   jspb.Message.setProto3StringField(this, 8, value);
 };
 
@@ -1346,13 +1346,13 @@ proto.storage.v1.Bucket.prototype.setCreatedAt = function(value) {
  * optional string createdJobId = 9;
  * @return {string}
  */
-proto.storage.v1.Bucket.prototype.getCreatedJobId = function() {
+proto.storage.v1.Bucket.prototype.getCreatedjobid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 9, ""));
 };
 
 
 /** @param {string} value */
-proto.storage.v1.Bucket.prototype.setCreatedJobId = function(value) {
+proto.storage.v1.Bucket.prototype.setCreatedjobid = function(value) {
   jspb.Message.setProto3StringField(this, 9, value);
 };
 
@@ -1361,13 +1361,13 @@ proto.storage.v1.Bucket.prototype.setCreatedJobId = function(value) {
  * optional string updatedAt = 10;
  * @return {string}
  */
-proto.storage.v1.Bucket.prototype.getUpdatedAt = function() {
+proto.storage.v1.Bucket.prototype.getUpdatedat = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 10, ""));
 };
 
 
 /** @param {string} value */
-proto.storage.v1.Bucket.prototype.setUpdatedAt = function(value) {
+proto.storage.v1.Bucket.prototype.setUpdatedat = function(value) {
   jspb.Message.setProto3StringField(this, 10, value);
 };
 
@@ -1376,13 +1376,13 @@ proto.storage.v1.Bucket.prototype.setUpdatedAt = function(value) {
  * optional string updatedJobId = 11;
  * @return {string}
  */
-proto.storage.v1.Bucket.prototype.getUpdatedJobId = function() {
+proto.storage.v1.Bucket.prototype.getUpdatedjobid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 11, ""));
 };
 
 
 /** @param {string} value */
-proto.storage.v1.Bucket.prototype.setUpdatedJobId = function(value) {
+proto.storage.v1.Bucket.prototype.setUpdatedjobid = function(value) {
   jspb.Message.setProto3StringField(this, 11, value);
 };
 
@@ -1791,13 +1791,13 @@ proto.storage.v1.CreateBucketResponse.serializeBinaryToWriter = function(message
  * optional string bucketId = 1;
  * @return {string}
  */
-proto.storage.v1.CreateBucketResponse.prototype.getBucketId = function() {
+proto.storage.v1.CreateBucketResponse.prototype.getBucketid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.storage.v1.CreateBucketResponse.prototype.setBucketId = function(value) {
+proto.storage.v1.CreateBucketResponse.prototype.setBucketid = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -1928,13 +1928,13 @@ proto.storage.v1.CreateUploadUrlRequest.serializeBinaryToWriter = function(messa
  * optional string bucketId = 1;
  * @return {string}
  */
-proto.storage.v1.CreateUploadUrlRequest.prototype.getBucketId = function() {
+proto.storage.v1.CreateUploadUrlRequest.prototype.getBucketid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.storage.v1.CreateUploadUrlRequest.prototype.setBucketId = function(value) {
+proto.storage.v1.CreateUploadUrlRequest.prototype.setBucketid = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -2097,13 +2097,13 @@ proto.storage.v1.CreateUploadUrlResponse.prototype.setSuccess = function(value) 
  * optional string uploadToken = 2;
  * @return {string}
  */
-proto.storage.v1.CreateUploadUrlResponse.prototype.getUploadToken = function() {
+proto.storage.v1.CreateUploadUrlResponse.prototype.getUploadtoken = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.storage.v1.CreateUploadUrlResponse.prototype.setUploadToken = function(value) {
+proto.storage.v1.CreateUploadUrlResponse.prototype.setUploadtoken = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
 

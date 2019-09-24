@@ -356,13 +356,13 @@ proto.identity.v1.SignUpLead.serializeBinaryToWriter = function(message, writer)
  * optional string signUpId = 1;
  * @return {string}
  */
-proto.identity.v1.SignUpLead.prototype.getSignUpId = function() {
+proto.identity.v1.SignUpLead.prototype.getSignupid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.identity.v1.SignUpLead.prototype.setSignUpId = function(value) {
+proto.identity.v1.SignUpLead.prototype.setSignupid = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -371,13 +371,13 @@ proto.identity.v1.SignUpLead.prototype.setSignUpId = function(value) {
  * optional ValidationChannel validationChannel = 2;
  * @return {!proto.identity.v1.ValidationChannel}
  */
-proto.identity.v1.SignUpLead.prototype.getValidationChannel = function() {
+proto.identity.v1.SignUpLead.prototype.getValidationchannel = function() {
   return /** @type {!proto.identity.v1.ValidationChannel} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /** @param {!proto.identity.v1.ValidationChannel} value */
-proto.identity.v1.SignUpLead.prototype.setValidationChannel = function(value) {
+proto.identity.v1.SignUpLead.prototype.setValidationchannel = function(value) {
   jspb.Message.setProto3EnumField(this, 2, value);
 };
 
@@ -431,13 +431,13 @@ proto.identity.v1.SignUpLead.prototype.setCellphone = function(value) {
  * optional string createdAt = 6;
  * @return {string}
  */
-proto.identity.v1.SignUpLead.prototype.getCreatedAt = function() {
+proto.identity.v1.SignUpLead.prototype.getCreatedat = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
 };
 
 
 /** @param {string} value */
-proto.identity.v1.SignUpLead.prototype.setCreatedAt = function(value) {
+proto.identity.v1.SignUpLead.prototype.setCreatedat = function(value) {
   jspb.Message.setProto3StringField(this, 6, value);
 };
 
@@ -446,13 +446,13 @@ proto.identity.v1.SignUpLead.prototype.setCreatedAt = function(value) {
  * optional string createdJobId = 7;
  * @return {string}
  */
-proto.identity.v1.SignUpLead.prototype.getCreatedJobId = function() {
+proto.identity.v1.SignUpLead.prototype.getCreatedjobid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
 };
 
 
 /** @param {string} value */
-proto.identity.v1.SignUpLead.prototype.setCreatedJobId = function(value) {
+proto.identity.v1.SignUpLead.prototype.setCreatedjobid = function(value) {
   jspb.Message.setProto3StringField(this, 7, value);
 };
 
@@ -461,13 +461,13 @@ proto.identity.v1.SignUpLead.prototype.setCreatedJobId = function(value) {
  * optional string updatedAt = 8;
  * @return {string}
  */
-proto.identity.v1.SignUpLead.prototype.getUpdatedAt = function() {
+proto.identity.v1.SignUpLead.prototype.getUpdatedat = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
 };
 
 
 /** @param {string} value */
-proto.identity.v1.SignUpLead.prototype.setUpdatedAt = function(value) {
+proto.identity.v1.SignUpLead.prototype.setUpdatedat = function(value) {
   jspb.Message.setProto3StringField(this, 8, value);
 };
 
@@ -476,13 +476,13 @@ proto.identity.v1.SignUpLead.prototype.setUpdatedAt = function(value) {
  * optional string updatedJobId = 9;
  * @return {string}
  */
-proto.identity.v1.SignUpLead.prototype.getUpdatedJobId = function() {
+proto.identity.v1.SignUpLead.prototype.getUpdatedjobid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 9, ""));
 };
 
 
 /** @param {string} value */
-proto.identity.v1.SignUpLead.prototype.setUpdatedJobId = function(value) {
+proto.identity.v1.SignUpLead.prototype.setUpdatedjobid = function(value) {
   jspb.Message.setProto3StringField(this, 9, value);
 };
 
@@ -491,13 +491,13 @@ proto.identity.v1.SignUpLead.prototype.setUpdatedJobId = function(value) {
  * optional string signedUpAt = 10;
  * @return {string}
  */
-proto.identity.v1.SignUpLead.prototype.getSignedUpAt = function() {
+proto.identity.v1.SignUpLead.prototype.getSignedupat = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 10, ""));
 };
 
 
 /** @param {string} value */
-proto.identity.v1.SignUpLead.prototype.setSignedUpAt = function(value) {
+proto.identity.v1.SignUpLead.prototype.setSignedupat = function(value) {
   jspb.Message.setProto3StringField(this, 10, value);
 };
 
@@ -506,13 +506,13 @@ proto.identity.v1.SignUpLead.prototype.setSignedUpAt = function(value) {
  * optional string signedUpJobId = 11;
  * @return {string}
  */
-proto.identity.v1.SignUpLead.prototype.getSignedUpJobId = function() {
+proto.identity.v1.SignUpLead.prototype.getSignedupjobid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 11, ""));
 };
 
 
 /** @param {string} value */
-proto.identity.v1.SignUpLead.prototype.setSignedUpJobId = function(value) {
+proto.identity.v1.SignUpLead.prototype.setSignedupjobid = function(value) {
   jspb.Message.setProto3StringField(this, 11, value);
 };
 
@@ -633,14 +633,14 @@ proto.identity.v1.SignUpLeadRequest.serializeBinaryToWriter = function(message, 
  * optional SignUpLead signUpLead = 1;
  * @return {?proto.identity.v1.SignUpLead}
  */
-proto.identity.v1.SignUpLeadRequest.prototype.getSignUpLead = function() {
+proto.identity.v1.SignUpLeadRequest.prototype.getSignuplead = function() {
   return /** @type{?proto.identity.v1.SignUpLead} */ (
     jspb.Message.getWrapperField(this, proto.identity.v1.SignUpLead, 1));
 };
 
 
 /** @param {?proto.identity.v1.SignUpLead|undefined} value */
-proto.identity.v1.SignUpLeadRequest.prototype.setSignUpLead = function(value) {
+proto.identity.v1.SignUpLeadRequest.prototype.setSignuplead = function(value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
@@ -776,13 +776,13 @@ proto.identity.v1.SignUpResponse.serializeBinaryToWriter = function(message, wri
  * optional string signUpId = 1;
  * @return {string}
  */
-proto.identity.v1.SignUpResponse.prototype.getSignUpId = function() {
+proto.identity.v1.SignUpResponse.prototype.getSignupid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.identity.v1.SignUpResponse.prototype.setSignUpId = function(value) {
+proto.identity.v1.SignUpResponse.prototype.setSignupid = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -913,13 +913,13 @@ proto.identity.v1.ValidateSignUpRequest.serializeBinaryToWriter = function(messa
  * optional string signUpId = 1;
  * @return {string}
  */
-proto.identity.v1.ValidateSignUpRequest.prototype.getSignUpId = function() {
+proto.identity.v1.ValidateSignUpRequest.prototype.getSignupid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.identity.v1.ValidateSignUpRequest.prototype.setSignUpId = function(value) {
+proto.identity.v1.ValidateSignUpRequest.prototype.setSignupid = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -928,13 +928,13 @@ proto.identity.v1.ValidateSignUpRequest.prototype.setSignUpId = function(value) 
  * optional string validationCode = 2;
  * @return {string}
  */
-proto.identity.v1.ValidateSignUpRequest.prototype.getValidationCode = function() {
+proto.identity.v1.ValidateSignUpRequest.prototype.getValidationcode = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.identity.v1.ValidateSignUpRequest.prototype.setValidationCode = function(value) {
+proto.identity.v1.ValidateSignUpRequest.prototype.setValidationcode = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -1082,13 +1082,13 @@ proto.identity.v1.ValidateSignUpResponse.prototype.setSuccess = function(value) 
  * optional string identityToken = 2;
  * @return {string}
  */
-proto.identity.v1.ValidateSignUpResponse.prototype.getIdentityToken = function() {
+proto.identity.v1.ValidateSignUpResponse.prototype.getIdentitytoken = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.identity.v1.ValidateSignUpResponse.prototype.setIdentityToken = function(value) {
+proto.identity.v1.ValidateSignUpResponse.prototype.setIdentitytoken = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
 

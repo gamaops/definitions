@@ -64,8 +64,8 @@ export namespace SignUpLead {
 }
 
 export class SignUpLeadRequest extends jspb.Message {
-  hasSignuplead(): boolean;
-  clearSignuplead(): void;
+  hasSignUpLead(): boolean;
+  clearSignUpLead(): void;
   getSignUpLead(): SignUpLead | undefined;
   setSignUpLead(value?: SignUpLead): void;
 

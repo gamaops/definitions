@@ -101,10 +101,10 @@ export class Bucket extends jspb.Message {
   getUpload(): Bucket.Upload | undefined;
   setUpload(value?: Bucket.Upload): void;
 
-  clearAcceptedmimetypesList(): void;
+  clearAcceptedMimeTypesList(): void;
   getAcceptedMimeTypesList(): Array<string>;
   setAcceptedMimeTypesList(value: Array<string>): void;
-  addAcceptedmimetypes(value: string, index?: number): string;
+  addAcceptedMimeTypes(value: string, index?: number): string;
 
   getMaxSize(): number;
   setMaxSize(value: number): void;

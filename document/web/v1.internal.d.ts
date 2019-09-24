@@ -12,10 +12,10 @@ export class DocumentRule extends jspb.Message {
   getLimits(): DocumentRule.Limits | undefined;
   setLimits(value?: DocumentRule.Limits): void;
 
-  clearAllowedaudiencesList(): void;
+  clearAllowedAudiencesList(): void;
   getAllowedAudiencesList(): Array<string>;
   setAllowedAudiencesList(value: Array<string>): void;
-  addAllowedaudiences(value: string, index?: number): string;
+  addAllowedAudiences(value: string, index?: number): string;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DocumentRule.AsObject;
@@ -55,43 +55,43 @@ export namespace DocumentRule {
   }
 }
 
-export class setDocumentRuleRequest extends jspb.Message {
-  hasDocumentrule(): boolean;
-  clearDocumentrule(): void;
+export class SetDocumentRuleRequest extends jspb.Message {
+  hasDocumentRule(): boolean;
+  clearDocumentRule(): void;
   getDocumentRule(): DocumentRule | undefined;
   setDocumentRule(value?: DocumentRule): void;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): setDocumentRuleRequest.AsObject;
-  static toObject(includeInstance: boolean, msg: setDocumentRuleRequest): setDocumentRuleRequest.AsObject;
+  toObject(includeInstance?: boolean): SetDocumentRuleRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: SetDocumentRuleRequest): SetDocumentRuleRequest.AsObject;
   static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
   static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: setDocumentRuleRequest, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): setDocumentRuleRequest;
-  static deserializeBinaryFromReader(message: setDocumentRuleRequest, reader: jspb.BinaryReader): setDocumentRuleRequest;
+  static serializeBinaryToWriter(message: SetDocumentRuleRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): SetDocumentRuleRequest;
+  static deserializeBinaryFromReader(message: SetDocumentRuleRequest, reader: jspb.BinaryReader): SetDocumentRuleRequest;
 }
 
-export namespace setDocumentRuleRequest {
+export namespace SetDocumentRuleRequest {
   export type AsObject = {
     documentrule?: DocumentRule.AsObject,
   }
 }
 
-export class setDocumentRuleResponse extends jspb.Message {
+export class SetDocumentRuleResponse extends jspb.Message {
   getSuccess(): boolean;
   setSuccess(value: boolean): void;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): setDocumentRuleResponse.AsObject;
-  static toObject(includeInstance: boolean, msg: setDocumentRuleResponse): setDocumentRuleResponse.AsObject;
+  toObject(includeInstance?: boolean): SetDocumentRuleResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: SetDocumentRuleResponse): SetDocumentRuleResponse.AsObject;
   static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
   static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: setDocumentRuleResponse, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): setDocumentRuleResponse;
-  static deserializeBinaryFromReader(message: setDocumentRuleResponse, reader: jspb.BinaryReader): setDocumentRuleResponse;
+  static serializeBinaryToWriter(message: SetDocumentRuleResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): SetDocumentRuleResponse;
+  static deserializeBinaryFromReader(message: SetDocumentRuleResponse, reader: jspb.BinaryReader): SetDocumentRuleResponse;
 }
 
-export namespace setDocumentRuleResponse {
+export namespace SetDocumentRuleResponse {
   export type AsObject = {
     success: boolean,
   }

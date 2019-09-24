@@ -53,43 +53,43 @@ export namespace UploadUrlRule {
   }
 }
 
-export class setUploadUrlRuleRequest extends jspb.Message {
-  hasUploadurlrule(): boolean;
-  clearUploadurlrule(): void;
+export class SetUploadUrlRuleRequest extends jspb.Message {
+  hasUploadUrlRule(): boolean;
+  clearUploadUrlRule(): void;
   getUploadUrlRule(): UploadUrlRule | undefined;
   setUploadUrlRule(value?: UploadUrlRule): void;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): setUploadUrlRuleRequest.AsObject;
-  static toObject(includeInstance: boolean, msg: setUploadUrlRuleRequest): setUploadUrlRuleRequest.AsObject;
+  toObject(includeInstance?: boolean): SetUploadUrlRuleRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: SetUploadUrlRuleRequest): SetUploadUrlRuleRequest.AsObject;
   static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
   static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: setUploadUrlRuleRequest, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): setUploadUrlRuleRequest;
-  static deserializeBinaryFromReader(message: setUploadUrlRuleRequest, reader: jspb.BinaryReader): setUploadUrlRuleRequest;
+  static serializeBinaryToWriter(message: SetUploadUrlRuleRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): SetUploadUrlRuleRequest;
+  static deserializeBinaryFromReader(message: SetUploadUrlRuleRequest, reader: jspb.BinaryReader): SetUploadUrlRuleRequest;
 }
 
-export namespace setUploadUrlRuleRequest {
+export namespace SetUploadUrlRuleRequest {
   export type AsObject = {
     uploadurlrule?: UploadUrlRule.AsObject,
   }
 }
 
-export class setUploadUrlRuleResponse extends jspb.Message {
+export class SetUploadUrlRuleResponse extends jspb.Message {
   getSuccess(): boolean;
   setSuccess(value: boolean): void;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): setUploadUrlRuleResponse.AsObject;
-  static toObject(includeInstance: boolean, msg: setUploadUrlRuleResponse): setUploadUrlRuleResponse.AsObject;
+  toObject(includeInstance?: boolean): SetUploadUrlRuleResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: SetUploadUrlRuleResponse): SetUploadUrlRuleResponse.AsObject;
   static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
   static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: setUploadUrlRuleResponse, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): setUploadUrlRuleResponse;
-  static deserializeBinaryFromReader(message: setUploadUrlRuleResponse, reader: jspb.BinaryReader): setUploadUrlRuleResponse;
+  static serializeBinaryToWriter(message: SetUploadUrlRuleResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): SetUploadUrlRuleResponse;
+  static deserializeBinaryFromReader(message: SetUploadUrlRuleResponse, reader: jspb.BinaryReader): SetUploadUrlRuleResponse;
 }
 
-export namespace setUploadUrlRuleResponse {
+export namespace SetUploadUrlRuleResponse {
   export type AsObject = {
     success: boolean,
   }

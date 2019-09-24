@@ -32,11 +32,29 @@ const normalizeFields = (filePath: string, fields: Array<string>) => {
 		const pascalCaseField = changeCase.pascal(field);
 		const camelCaseField = changeCase.camel(field);
 
-		regex = new RegExp('get'+field, 'ig');
-		content = content.replace(regex, 'get'+pascalCaseField);
+		regex = new RegExp('get'+field+'[\\s]*\\(', 'ig');
+		content = content.replace(regex, 'get'+pascalCaseField+'(');
 
-		regex = new RegExp('set'+field, 'ig');
-		content = content.replace(regex, 'set'+pascalCaseField);
+		regex = new RegExp('get'+field+'List[\\s]*\\(', 'ig');
+		content = content.replace(regex, 'get'+pascalCaseField+'List(');
+
+		regex = new RegExp('set'+field+'[\\s]*\\(', 'ig');
+		content = content.replace(regex, 'set'+pascalCaseField+'(');
+
+		regex = new RegExp('set'+field+'List[\\s]*\\(', 'ig');
+		content = content.replace(regex, 'set'+pascalCaseField+'List(');
+
+		regex = new RegExp('has'+field+'[\\s]*\\(', 'ig');
+		content = content.replace(regex, 'has'+pascalCaseField+'(');
+
+		regex = new RegExp('clear'+field+'[\\s]*\\(', 'ig');
+		content = content.replace(regex, 'clear'+pascalCaseField+'(');
+
+		regex = new RegExp('clear'+field+'List[\\s]*\\(', 'ig');
+		content = content.replace(regex, 'clear'+pascalCaseField+'List(');
+
+		regex = new RegExp('add'+field+'[\\s]*\\(', 'ig');
+		content = content.replace(regex, 'add'+pascalCaseField+'(');
 
 		regex = new RegExp(field+':', 'ig');
 		content = content.replace(regex, camelCaseField+':');

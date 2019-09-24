@@ -311,13 +311,13 @@ proto.document.v1.DocumentFile.serializeBinaryToWriter = function(message, write
  * optional string fileId = 1;
  * @return {string}
  */
-proto.document.v1.DocumentFile.prototype.getFileId = function() {
+proto.document.v1.DocumentFile.prototype.getFileid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.document.v1.DocumentFile.prototype.setFileId = function(value) {
+proto.document.v1.DocumentFile.prototype.setFileid = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -326,13 +326,13 @@ proto.document.v1.DocumentFile.prototype.setFileId = function(value) {
  * optional string documentId = 2;
  * @return {string}
  */
-proto.document.v1.DocumentFile.prototype.getDocumentId = function() {
+proto.document.v1.DocumentFile.prototype.getDocumentid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.document.v1.DocumentFile.prototype.setDocumentId = function(value) {
+proto.document.v1.DocumentFile.prototype.setDocumentid = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -341,13 +341,13 @@ proto.document.v1.DocumentFile.prototype.setDocumentId = function(value) {
  * optional string validatedAt = 3;
  * @return {string}
  */
-proto.document.v1.DocumentFile.prototype.getValidatedAt = function() {
+proto.document.v1.DocumentFile.prototype.getValidatedat = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /** @param {string} value */
-proto.document.v1.DocumentFile.prototype.setValidatedAt = function(value) {
+proto.document.v1.DocumentFile.prototype.setValidatedat = function(value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
 
@@ -358,13 +358,13 @@ proto.document.v1.DocumentFile.prototype.setValidatedAt = function(value) {
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
-proto.document.v1.DocumentFile.prototype.getIsValid = function() {
+proto.document.v1.DocumentFile.prototype.getIsvalid = function() {
   return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 4, false));
 };
 
 
 /** @param {boolean} value */
-proto.document.v1.DocumentFile.prototype.setIsValid = function(value) {
+proto.document.v1.DocumentFile.prototype.setIsvalid = function(value) {
   jspb.Message.setProto3BooleanField(this, 4, value);
 };
 
@@ -373,13 +373,13 @@ proto.document.v1.DocumentFile.prototype.setIsValid = function(value) {
  * optional string createdAt = 5;
  * @return {string}
  */
-proto.document.v1.DocumentFile.prototype.getCreatedAt = function() {
+proto.document.v1.DocumentFile.prototype.getCreatedat = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
 
 
 /** @param {string} value */
-proto.document.v1.DocumentFile.prototype.setCreatedAt = function(value) {
+proto.document.v1.DocumentFile.prototype.setCreatedat = function(value) {
   jspb.Message.setProto3StringField(this, 5, value);
 };
 
@@ -388,13 +388,13 @@ proto.document.v1.DocumentFile.prototype.setCreatedAt = function(value) {
  * optional string createdJobId = 6;
  * @return {string}
  */
-proto.document.v1.DocumentFile.prototype.getCreatedJobId = function() {
+proto.document.v1.DocumentFile.prototype.getCreatedjobid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
 };
 
 
 /** @param {string} value */
-proto.document.v1.DocumentFile.prototype.setCreatedJobId = function(value) {
+proto.document.v1.DocumentFile.prototype.setCreatedjobid = function(value) {
   jspb.Message.setProto3StringField(this, 6, value);
 };
 
@@ -403,13 +403,13 @@ proto.document.v1.DocumentFile.prototype.setCreatedJobId = function(value) {
  * optional string updatedAt = 7;
  * @return {string}
  */
-proto.document.v1.DocumentFile.prototype.getUpdatedAt = function() {
+proto.document.v1.DocumentFile.prototype.getUpdatedat = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
 };
 
 
 /** @param {string} value */
-proto.document.v1.DocumentFile.prototype.setUpdatedAt = function(value) {
+proto.document.v1.DocumentFile.prototype.setUpdatedat = function(value) {
   jspb.Message.setProto3StringField(this, 7, value);
 };
 
@@ -418,13 +418,13 @@ proto.document.v1.DocumentFile.prototype.setUpdatedAt = function(value) {
  * optional string updatedJobId = 8;
  * @return {string}
  */
-proto.document.v1.DocumentFile.prototype.getUpdatedJobId = function() {
+proto.document.v1.DocumentFile.prototype.getUpdatedjobid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
 };
 
 
 /** @param {string} value */
-proto.document.v1.DocumentFile.prototype.setUpdatedJobId = function(value) {
+proto.document.v1.DocumentFile.prototype.setUpdatedjobid = function(value) {
   jspb.Message.setProto3StringField(this, 8, value);
 };
 
@@ -684,13 +684,13 @@ proto.document.v1.Document.serializeBinaryToWriter = function(message, writer) {
  * optional string documentId = 1;
  * @return {string}
  */
-proto.document.v1.Document.prototype.getDocumentId = function() {
+proto.document.v1.Document.prototype.getDocumentid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.document.v1.Document.prototype.setDocumentId = function(value) {
+proto.document.v1.Document.prototype.setDocumentid = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -714,14 +714,14 @@ proto.document.v1.Document.prototype.setSubject = function(value) {
  * optional document.kinds.BraCpf braCpf = 3;
  * @return {?proto.document.kinds.BraCpf}
  */
-proto.document.v1.Document.prototype.getBraCpf = function() {
+proto.document.v1.Document.prototype.getBracpf = function() {
   return /** @type{?proto.document.kinds.BraCpf} */ (
     jspb.Message.getWrapperField(this, document_proto_kinds_pb.BraCpf, 3));
 };
 
 
 /** @param {?proto.document.kinds.BraCpf|undefined} value */
-proto.document.v1.Document.prototype.setBraCpf = function(value) {
+proto.document.v1.Document.prototype.setBracpf = function(value) {
   jspb.Message.setOneofWrapperField(this, 3, proto.document.v1.Document.oneofGroups_[0], value);
 };
 
@@ -747,14 +747,14 @@ proto.document.v1.Document.prototype.hasBracpf = function() {
  * optional document.kinds.BraCnh braCnh = 4;
  * @return {?proto.document.kinds.BraCnh}
  */
-proto.document.v1.Document.prototype.getBraCnh = function() {
+proto.document.v1.Document.prototype.getBracnh = function() {
   return /** @type{?proto.document.kinds.BraCnh} */ (
     jspb.Message.getWrapperField(this, document_proto_kinds_pb.BraCnh, 4));
 };
 
 
 /** @param {?proto.document.kinds.BraCnh|undefined} value */
-proto.document.v1.Document.prototype.setBraCnh = function(value) {
+proto.document.v1.Document.prototype.setBracnh = function(value) {
   jspb.Message.setOneofWrapperField(this, 4, proto.document.v1.Document.oneofGroups_[0], value);
 };
 
@@ -780,13 +780,13 @@ proto.document.v1.Document.prototype.hasBracnh = function() {
  * optional string createdAt = 5;
  * @return {string}
  */
-proto.document.v1.Document.prototype.getCreatedAt = function() {
+proto.document.v1.Document.prototype.getCreatedat = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
 
 
 /** @param {string} value */
-proto.document.v1.Document.prototype.setCreatedAt = function(value) {
+proto.document.v1.Document.prototype.setCreatedat = function(value) {
   jspb.Message.setProto3StringField(this, 5, value);
 };
 
@@ -795,13 +795,13 @@ proto.document.v1.Document.prototype.setCreatedAt = function(value) {
  * optional string createdJobId = 6;
  * @return {string}
  */
-proto.document.v1.Document.prototype.getCreatedJobId = function() {
+proto.document.v1.Document.prototype.getCreatedjobid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
 };
 
 
 /** @param {string} value */
-proto.document.v1.Document.prototype.setCreatedJobId = function(value) {
+proto.document.v1.Document.prototype.setCreatedjobid = function(value) {
   jspb.Message.setProto3StringField(this, 6, value);
 };
 
@@ -810,13 +810,13 @@ proto.document.v1.Document.prototype.setCreatedJobId = function(value) {
  * optional string updatedAt = 7;
  * @return {string}
  */
-proto.document.v1.Document.prototype.getUpdatedAt = function() {
+proto.document.v1.Document.prototype.getUpdatedat = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
 };
 
 
 /** @param {string} value */
-proto.document.v1.Document.prototype.setUpdatedAt = function(value) {
+proto.document.v1.Document.prototype.setUpdatedat = function(value) {
   jspb.Message.setProto3StringField(this, 7, value);
 };
 
@@ -825,13 +825,13 @@ proto.document.v1.Document.prototype.setUpdatedAt = function(value) {
  * optional string updatedJobId = 8;
  * @return {string}
  */
-proto.document.v1.Document.prototype.getUpdatedJobId = function() {
+proto.document.v1.Document.prototype.getUpdatedjobid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
 };
 
 
 /** @param {string} value */
-proto.document.v1.Document.prototype.setUpdatedJobId = function(value) {
+proto.document.v1.Document.prototype.setUpdatedjobid = function(value) {
   jspb.Message.setProto3StringField(this, 8, value);
 };
 
@@ -1122,13 +1122,13 @@ proto.document.v1.AddDocumentResponse.serializeBinaryToWriter = function(message
  * optional string documentId = 1;
  * @return {string}
  */
-proto.document.v1.AddDocumentResponse.prototype.getDocumentId = function() {
+proto.document.v1.AddDocumentResponse.prototype.getDocumentid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.document.v1.AddDocumentResponse.prototype.setDocumentId = function(value) {
+proto.document.v1.AddDocumentResponse.prototype.setDocumentid = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -1137,13 +1137,13 @@ proto.document.v1.AddDocumentResponse.prototype.setDocumentId = function(value) 
  * optional string bucketId = 2;
  * @return {string}
  */
-proto.document.v1.AddDocumentResponse.prototype.getBucketId = function() {
+proto.document.v1.AddDocumentResponse.prototype.getBucketid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.document.v1.AddDocumentResponse.prototype.setBucketId = function(value) {
+proto.document.v1.AddDocumentResponse.prototype.setBucketid = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
 
