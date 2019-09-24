@@ -1,3 +1,12 @@
+## 2019-09-24T18:59:58.428Z
+### 🐛 - fixing a bug (type)
+
+#### none
+
+- Fix js files front parsing naming
+
+-----------------------------
+
 ## 2019-09-24T11:47:27.935Z
 ### 🆕 - add code or file(s) (type)
 
