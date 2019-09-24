@@ -272,13 +272,13 @@ proto.carrier.v1.Vehicle.VehicleKind = {
  * optional string vehicleId = 1;
  * @return {string}
  */
-proto.carrier.v1.Vehicle.prototype.getVehicleid = function() {
+proto.carrier.v1.Vehicle.prototype.getVehicleId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.carrier.v1.Vehicle.prototype.setVehicleid = function(value) {
+proto.carrier.v1.Vehicle.prototype.setVehicleId = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -287,13 +287,13 @@ proto.carrier.v1.Vehicle.prototype.setVehicleid = function(value) {
  * optional string personId = 2;
  * @return {string}
  */
-proto.carrier.v1.Vehicle.prototype.getPersonid = function() {
+proto.carrier.v1.Vehicle.prototype.getPersonId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.carrier.v1.Vehicle.prototype.setPersonid = function(value) {
+proto.carrier.v1.Vehicle.prototype.setPersonId = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -317,13 +317,13 @@ proto.carrier.v1.Vehicle.prototype.setKind = function(value) {
  * optional string brandId = 4;
  * @return {string}
  */
-proto.carrier.v1.Vehicle.prototype.getBrandid = function() {
+proto.carrier.v1.Vehicle.prototype.getBrandId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
 
 /** @param {string} value */
-proto.carrier.v1.Vehicle.prototype.setBrandid = function(value) {
+proto.carrier.v1.Vehicle.prototype.setBrandId = function(value) {
   jspb.Message.setProto3StringField(this, 4, value);
 };
 
@@ -332,13 +332,13 @@ proto.carrier.v1.Vehicle.prototype.setBrandid = function(value) {
  * optional string modelId = 5;
  * @return {string}
  */
-proto.carrier.v1.Vehicle.prototype.getModelid = function() {
+proto.carrier.v1.Vehicle.prototype.getModelId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
 
 
 /** @param {string} value */
-proto.carrier.v1.Vehicle.prototype.setModelid = function(value) {
+proto.carrier.v1.Vehicle.prototype.setModelId = function(value) {
   jspb.Message.setProto3StringField(this, 5, value);
 };
 
@@ -362,13 +362,13 @@ proto.carrier.v1.Vehicle.prototype.setColor = function(value) {
  * optional string licensePlate = 7;
  * @return {string}
  */
-proto.carrier.v1.Vehicle.prototype.getLicenseplate = function() {
+proto.carrier.v1.Vehicle.prototype.getLicensePlate = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
 };
 
 
 /** @param {string} value */
-proto.carrier.v1.Vehicle.prototype.setLicenseplate = function(value) {
+proto.carrier.v1.Vehicle.prototype.setLicensePlate = function(value) {
   jspb.Message.setProto3StringField(this, 7, value);
 };
 
@@ -632,13 +632,13 @@ proto.carrier.v1.AddVehicleResponse.serializeBinaryToWriter = function(message, 
  * optional string vehicleId = 1;
  * @return {string}
  */
-proto.carrier.v1.AddVehicleResponse.prototype.getVehicleid = function() {
+proto.carrier.v1.AddVehicleResponse.prototype.getVehicleId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.carrier.v1.AddVehicleResponse.prototype.setVehicleid = function(value) {
+proto.carrier.v1.AddVehicleResponse.prototype.setVehicleId = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 

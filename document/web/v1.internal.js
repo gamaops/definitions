@@ -356,13 +356,13 @@ proto.document.v1.internal.DocumentRule.Limits.serializeBinaryToWriter = functio
  * optional int32 maxValueCount = 1;
  * @return {number}
  */
-proto.document.v1.internal.DocumentRule.Limits.prototype.getMaxvaluecount = function() {
+proto.document.v1.internal.DocumentRule.Limits.prototype.getMaxValueCount = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /** @param {number} value */
-proto.document.v1.internal.DocumentRule.Limits.prototype.setMaxvaluecount = function(value) {
+proto.document.v1.internal.DocumentRule.Limits.prototype.setMaxValueCount = function(value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
 
@@ -371,13 +371,13 @@ proto.document.v1.internal.DocumentRule.Limits.prototype.setMaxvaluecount = func
  * optional string documentKind = 1;
  * @return {string}
  */
-proto.document.v1.internal.DocumentRule.prototype.getDocumentkind = function() {
+proto.document.v1.internal.DocumentRule.prototype.getDocumentKind = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.document.v1.internal.DocumentRule.prototype.setDocumentkind = function(value) {
+proto.document.v1.internal.DocumentRule.prototype.setDocumentKind = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -419,13 +419,13 @@ proto.document.v1.internal.DocumentRule.prototype.hasLimits = function() {
  * repeated string allowedAudiences = 3;
  * @return {!Array<string>}
  */
-proto.document.v1.internal.DocumentRule.prototype.getAllowedaudiencesList = function() {
+proto.document.v1.internal.DocumentRule.prototype.getAllowedAudiencesList = function() {
   return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 3));
 };
 
 
 /** @param {!Array<string>} value */
-proto.document.v1.internal.DocumentRule.prototype.setAllowedaudiencesList = function(value) {
+proto.document.v1.internal.DocumentRule.prototype.setAllowedAudiencesList = function(value) {
   jspb.Message.setField(this, 3, value || []);
 };
 
@@ -434,7 +434,7 @@ proto.document.v1.internal.DocumentRule.prototype.setAllowedaudiencesList = func
  * @param {string} value
  * @param {number=} opt_index
  */
-proto.document.v1.internal.DocumentRule.prototype.addAllowedaudiences = function(value, opt_index) {
+proto.document.v1.internal.DocumentRule.prototype.addAllowedAudiences = function(value, opt_index) {
   jspb.Message.addToRepeatedField(this, 3, value, opt_index);
 };
 
@@ -442,7 +442,7 @@ proto.document.v1.internal.DocumentRule.prototype.addAllowedaudiences = function
 /**
  * Clears the list making it empty but non-null.
  */
-proto.document.v1.internal.DocumentRule.prototype.clearAllowedaudiencesList = function() {
+proto.document.v1.internal.DocumentRule.prototype.clearAllowedAudiencesList = function() {
   this.setAllowedAudiencesList([]);
 };
 
@@ -563,14 +563,14 @@ proto.document.v1.internal.SetDocumentRuleRequest.serializeBinaryToWriter = func
  * optional DocumentRule documentRule = 1;
  * @return {?proto.document.v1.internal.DocumentRule}
  */
-proto.document.v1.internal.SetDocumentRuleRequest.prototype.getDocumentrule = function() {
+proto.document.v1.internal.SetDocumentRuleRequest.prototype.getDocumentRule = function() {
   return /** @type{?proto.document.v1.internal.DocumentRule} */ (
     jspb.Message.getWrapperField(this, proto.document.v1.internal.DocumentRule, 1));
 };
 
 
 /** @param {?proto.document.v1.internal.DocumentRule|undefined} value */
-proto.document.v1.internal.SetDocumentRuleRequest.prototype.setDocumentrule = function(value) {
+proto.document.v1.internal.SetDocumentRuleRequest.prototype.setDocumentRule = function(value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
@@ -578,7 +578,7 @@ proto.document.v1.internal.SetDocumentRuleRequest.prototype.setDocumentrule = fu
 /**
  * Clears the message field making it undefined.
  */
-proto.document.v1.internal.SetDocumentRuleRequest.prototype.clearDocumentrule = function() {
+proto.document.v1.internal.SetDocumentRuleRequest.prototype.clearDocumentRule = function() {
   this.setDocumentRule(undefined);
 };
 
@@ -587,7 +587,7 @@ proto.document.v1.internal.SetDocumentRuleRequest.prototype.clearDocumentrule = 
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.document.v1.internal.SetDocumentRuleRequest.prototype.hasDocumentrule = function() {
+proto.document.v1.internal.SetDocumentRuleRequest.prototype.hasDocumentRule = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 

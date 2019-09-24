@@ -35,11 +35,17 @@ const normalizeFields = (filePath: string, fields: Array<string>) => {
 		regex = new RegExp('get'+field+'[\\s]*\\(', 'ig');
 		content = content.replace(regex, 'get'+pascalCaseField+'(');
 
+		regex = new RegExp('prototype\\.get'+field, 'ig');
+		content = content.replace(regex, 'prototype.get'+pascalCaseField);
+
 		regex = new RegExp('get'+field+'List[\\s]*\\(', 'ig');
 		content = content.replace(regex, 'get'+pascalCaseField+'List(');
 
 		regex = new RegExp('set'+field+'[\\s]*\\(', 'ig');
 		content = content.replace(regex, 'set'+pascalCaseField+'(');
+
+		regex = new RegExp('prototype\\.set'+field, 'ig');
+		content = content.replace(regex, 'prototype.set'+pascalCaseField);
 
 		regex = new RegExp('set'+field+'List[\\s]*\\(', 'ig');
 		content = content.replace(regex, 'set'+pascalCaseField+'List(');
@@ -47,14 +53,23 @@ const normalizeFields = (filePath: string, fields: Array<string>) => {
 		regex = new RegExp('has'+field+'[\\s]*\\(', 'ig');
 		content = content.replace(regex, 'has'+pascalCaseField+'(');
 
+		regex = new RegExp('prototype\\.has'+field, 'ig');
+		content = content.replace(regex, 'prototype.has'+pascalCaseField);
+
 		regex = new RegExp('clear'+field+'[\\s]*\\(', 'ig');
 		content = content.replace(regex, 'clear'+pascalCaseField+'(');
+
+		regex = new RegExp('prototype\\.clear'+field, 'ig');
+		content = content.replace(regex, 'prototype.clear'+pascalCaseField);
 
 		regex = new RegExp('clear'+field+'List[\\s]*\\(', 'ig');
 		content = content.replace(regex, 'clear'+pascalCaseField+'List(');
 
 		regex = new RegExp('add'+field+'[\\s]*\\(', 'ig');
 		content = content.replace(regex, 'add'+pascalCaseField+'(');
+
+		regex = new RegExp('prototype\\.add'+field, 'ig');
+		content = content.replace(regex, 'prototype.add'+pascalCaseField);
 
 		regex = new RegExp(field+':', 'ig');
 		content = content.replace(regex, camelCaseField+':');

@@ -183,13 +183,13 @@ proto.commons.v1.OperationsDates.serializeBinaryToWriter = function(message, wri
  * optional string createdAt = 1;
  * @return {string}
  */
-proto.commons.v1.OperationsDates.prototype.getCreatedat = function() {
+proto.commons.v1.OperationsDates.prototype.getCreatedAt = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.commons.v1.OperationsDates.prototype.setCreatedat = function(value) {
+proto.commons.v1.OperationsDates.prototype.setCreatedAt = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -198,13 +198,13 @@ proto.commons.v1.OperationsDates.prototype.setCreatedat = function(value) {
  * optional string createdJobId = 2;
  * @return {string}
  */
-proto.commons.v1.OperationsDates.prototype.getCreatedjobid = function() {
+proto.commons.v1.OperationsDates.prototype.getCreatedJobId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.commons.v1.OperationsDates.prototype.setCreatedjobid = function(value) {
+proto.commons.v1.OperationsDates.prototype.setCreatedJobId = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -213,13 +213,13 @@ proto.commons.v1.OperationsDates.prototype.setCreatedjobid = function(value) {
  * optional string updatedAt = 3;
  * @return {string}
  */
-proto.commons.v1.OperationsDates.prototype.getUpdatedat = function() {
+proto.commons.v1.OperationsDates.prototype.getUpdatedAt = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /** @param {string} value */
-proto.commons.v1.OperationsDates.prototype.setUpdatedat = function(value) {
+proto.commons.v1.OperationsDates.prototype.setUpdatedAt = function(value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
 
@@ -228,13 +228,13 @@ proto.commons.v1.OperationsDates.prototype.setUpdatedat = function(value) {
  * optional string updatedJobId = 4;
  * @return {string}
  */
-proto.commons.v1.OperationsDates.prototype.getUpdatedjobid = function() {
+proto.commons.v1.OperationsDates.prototype.getUpdatedJobId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
 
 /** @param {string} value */
-proto.commons.v1.OperationsDates.prototype.setUpdatedjobid = function(value) {
+proto.commons.v1.OperationsDates.prototype.setUpdatedJobId = function(value) {
   jspb.Message.setProto3StringField(this, 4, value);
 };
 

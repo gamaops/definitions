@@ -349,13 +349,13 @@ proto.storage.v1.internal.UploadUrlRule.Limits.serializeBinaryToWriter = functio
  * optional int32 maxFileCount = 1;
  * @return {number}
  */
-proto.storage.v1.internal.UploadUrlRule.Limits.prototype.getMaxfilecount = function() {
+proto.storage.v1.internal.UploadUrlRule.Limits.prototype.getMaxFileCount = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /** @param {number} value */
-proto.storage.v1.internal.UploadUrlRule.Limits.prototype.setMaxfilecount = function(value) {
+proto.storage.v1.internal.UploadUrlRule.Limits.prototype.setMaxFileCount = function(value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
 
@@ -412,13 +412,13 @@ proto.storage.v1.internal.UploadUrlRule.prototype.hasLimits = function() {
  * optional string bucketId = 3;
  * @return {string}
  */
-proto.storage.v1.internal.UploadUrlRule.prototype.getBucketid = function() {
+proto.storage.v1.internal.UploadUrlRule.prototype.getBucketId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /** @param {string} value */
-proto.storage.v1.internal.UploadUrlRule.prototype.setBucketid = function(value) {
+proto.storage.v1.internal.UploadUrlRule.prototype.setBucketId = function(value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
 
@@ -539,14 +539,14 @@ proto.storage.v1.internal.SetUploadUrlRuleRequest.serializeBinaryToWriter = func
  * optional UploadUrlRule uploadUrlRule = 1;
  * @return {?proto.storage.v1.internal.UploadUrlRule}
  */
-proto.storage.v1.internal.SetUploadUrlRuleRequest.prototype.getUploadurlrule = function() {
+proto.storage.v1.internal.SetUploadUrlRuleRequest.prototype.getUploadUrlRule = function() {
   return /** @type{?proto.storage.v1.internal.UploadUrlRule} */ (
     jspb.Message.getWrapperField(this, proto.storage.v1.internal.UploadUrlRule, 1));
 };
 
 
 /** @param {?proto.storage.v1.internal.UploadUrlRule|undefined} value */
-proto.storage.v1.internal.SetUploadUrlRuleRequest.prototype.setUploadurlrule = function(value) {
+proto.storage.v1.internal.SetUploadUrlRuleRequest.prototype.setUploadUrlRule = function(value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
@@ -554,7 +554,7 @@ proto.storage.v1.internal.SetUploadUrlRuleRequest.prototype.setUploadurlrule = f
 /**
  * Clears the message field making it undefined.
  */
-proto.storage.v1.internal.SetUploadUrlRuleRequest.prototype.clearUploadurlrule = function() {
+proto.storage.v1.internal.SetUploadUrlRuleRequest.prototype.clearUploadUrlRule = function() {
   this.setUploadUrlRule(undefined);
 };
 
@@ -563,7 +563,7 @@ proto.storage.v1.internal.SetUploadUrlRuleRequest.prototype.clearUploadurlrule =
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.storage.v1.internal.SetUploadUrlRuleRequest.prototype.hasUploadurlrule = function() {
+proto.storage.v1.internal.SetUploadUrlRuleRequest.prototype.hasUploadUrlRule = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
